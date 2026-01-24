@@ -79,6 +79,7 @@
 }
 
 @theme inline {
+  --font-family-sans: 'Zen Kaku Gothic New', sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -126,6 +127,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
   }
 
   /**
