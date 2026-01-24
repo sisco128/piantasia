@@ -179,3 +179,13 @@
     line-height: 1.5;
   }
 }
+
+/* Hero carousel zoom-out animation */
+@keyframes zoom-out {
+  0% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -13,7 +13,13 @@ export function Footer() {
               All our products are organic, sustainably sourced, and crafted with care.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a 
+                href="https://www.instagram.com/Piantasia.eu/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+                aria-label="Follow us on Instagram (opens in new tab)"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="#" className="text-white/80 hover:text-white transition-colors">
