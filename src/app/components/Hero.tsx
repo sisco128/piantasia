@@ -1,7 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 
 // Hero background image - local asset
-const forestImage = "/hero-forest.jpg";
+const forestImage = "/piantasia-bg-20260124.png";
 
 export function Hero() {
   return (
