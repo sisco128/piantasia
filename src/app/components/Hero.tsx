@@ -1,6 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 
-// Hero background image
+// Hero background image - local asset
 const forestImage = "/hero-forest.jpg";
 
 export function Hero() {

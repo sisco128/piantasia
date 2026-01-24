@@ -1,4 +1,4 @@
-import { ShoppingCart, Menu, X, Leaf } from 'lucide-react';
+import { ShoppingCart, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export function Header() {
@@ -13,9 +13,8 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" aria-label="Piantasia - Go to homepage" className="flex items-center gap-2">
-              <Leaf className="h-8 w-8 text-[#2B5142]" />
-              <span className="text-2xl font-bold text-[#2B5142]">Piantasia</span>
+            <a href="/" aria-label="Piantasia - Go to homepage">
+              <img src="/logo-piantasia.png" alt="Piantasia logo" className="h-16 w-auto" />
             </a>
           </div>
 
