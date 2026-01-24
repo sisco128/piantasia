@@ -1,6 +1,7 @@
 import { ChevronDown } from 'lucide-react';
-import heroLogo from 'figma:asset/005576349ac08af22a03967920a442c41ed97ace.png';
-import forestImage from 'figma:asset/279ac3d9c067a8e8310a2dcaaaa4f96da7210d10.png';
+
+// Hero background image
+const forestImage = "/hero-forest.jpg";
 
 export function Hero() {
   return (

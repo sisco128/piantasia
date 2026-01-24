@@ -1,5 +1,4 @@
-import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
-import logo from 'figma:asset/0c9c94ee17a0572c7443134e0f4fe04bc7274d8f.png';
+import { Instagram, Mail, Leaf } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -8,7 +7,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <img src={logo} alt="Piantasia" className="h-10 w-auto mb-4" />
+            <div className="flex items-center gap-2 mb-4">
+              <Leaf className="h-8 w-8 text-white" />
+              <span className="text-2xl font-bold text-white">Piantasia</span>
+            </div>
             <p className="text-white/80 mb-4 max-w-md">
               Piantasia offers premium herbal blends as natural alternatives to traditional smoking. 
               All our products are organic, sustainably sourced, and crafted with care.
