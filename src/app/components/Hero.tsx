@@ -77,7 +77,7 @@ export function Hero() {
           <div className="text-center">
             {/* Tagline */}
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto leading-tight tracking-tight">
-              Natural herbal blends for a healthier alternative
+              Unwind with Plants
             </h1>
             <h2 className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto">
               Discover our carefully crafted smoking substitutes made from organic herbs and botanicals
