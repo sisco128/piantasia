@@ -10,13 +10,6 @@ export const products: Product[] = [
     badge: "Bestseller"
   },
   {
-    id: 'citrus-uplift',
-    name: "Citrus Uplift",
-    description: "Energizing mix of lemon balm, mint, and orange peel",
-    price: "$22.99",
-    image: "https://images.unsplash.com/photo-1753010555135-18137742f5ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZXJiYWwlMjB0ZWElMjBibGVuZHxlbnwxfHx8fDE3Njg5MzY3NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-  {
     id: 'forest-harmony',
     name: "Forest Harmony",
     description: "Earthy blend of sage, eucalyptus, and pine needles",

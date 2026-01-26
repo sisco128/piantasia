@@ -20,13 +20,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F5F2ED]">
       <Header />
-      <Hero />
+      {/* <Hero /> */}
 
       {/* Products Section */}
       <section id="products" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-[#2B5142] mb-4">Our Signature Blends</h2>
+            <h2 className="text-4xl md:text-5xl font-semibold text-[#2B5142] mb-4">Unwind with Plants</h2>
             <p className="text-lg text-[#2B5142]/70 max-w-2xl mx-auto">
               Explore our collection of premium herbal smoking blends, each thoughtfully created to provide a unique experience
             </p>

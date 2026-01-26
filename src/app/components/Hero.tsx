@@ -79,8 +79,8 @@ export function Hero() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto leading-tight tracking-tight">
               Unwind with Plants
             </h1>
-            <h2 className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto">
-              Discover our carefully crafted smoking substitutes made from organic herbs and botanicals
+            <h2 className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto">
+              Botanical Blends Hand-crafted in Berlin
             </h2>
 
             {/* CTA Buttons */}
