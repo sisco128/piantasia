@@ -1,4 +1,4 @@
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Package } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface ProductCardProps {
@@ -25,7 +25,7 @@ export function ProductCard({ name, description, price, image, badge }: ProductC
         />
         {badge && (
           <span 
-            className="absolute top-4 right-4 bg-[#C67C4F] text-white px-3 py-1 rounded-full text-sm"
+            className="absolute top-4 right-4 bg-white text-[#2B5142] border border-[#2B5142] px-3 py-1 rounded-full text-sm font-medium"
             aria-label={`Badge: ${badge}`}
           >
             {badge}
@@ -36,7 +36,11 @@ export function ProductCard({ name, description, price, image, badge }: ProductC
       {/* Product Info */}
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl text-[#2B5142] mb-2">{name}</h3>
-        <p className="text-[#2B5142]/70 text-sm mb-4 flex-grow">{description}</p>
+        <p className="text-[#2B5142]/70 text-sm mb-2 flex-grow">{description}</p>
+        <div className="flex items-center gap-1.5 mb-4">
+          <Package className="w-3.5 h-3.5 text-[#2B5142]/60" />
+          <p className="text-[#2B5142]/60 text-xs font-medium">11 grammi</p>
+        </div>
         
         <div className="flex items-center justify-between mt-auto">
           <span className="text-2xl text-[#2B5142]" aria-label={`Price: ${price}`}>{price}</span>
