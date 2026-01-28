@@ -2,20 +2,10 @@ import { Header } from '@/app/components/Header';
 import { Hero } from '@/app/components/Hero';
 import { ProductCard } from '@/app/components/ProductCard';
 import { Footer } from '@/app/components/Footer';
-import { Mail } from 'lucide-react';
-import { useState } from 'react';
 import { products } from '@/data/products';
 import { benefits } from '@/data/benefits';
 
 export default function App() {
-  const [email, setEmail] = useState('');
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle newsletter signup
-    console.log('Newsletter signup:', email);
-    setEmail('');
-  };
 
   return (
     <div className="min-h-screen bg-[#F5F2ED]">
@@ -96,42 +86,6 @@ export default function App() {
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section id="contact" className="py-20 bg-[#2B5142] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
-            <Mail className="w-8 h-8" />
-          </div>
-          <h2 className="text-4xl md:text-5xl mb-4">Stay Connected</h2>
-          <p className="text-xl text-white/80 mb-8">
-            Subscribe to our newsletter for exclusive offers, new blends, and wellness tips
-          </p>
-          
-          <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-full text-[#2B5142] bg-white focus:outline-none focus:ring-2 focus:ring-white shadow-lg placeholder:text-[#2B5142]/50"
-                required
-              />
-              <button 
-                type="submit"
-                className="bg-white text-[#2B5142] px-8 py-4 rounded-full hover:bg-[#F5F2ED] transition-all transform hover:scale-105"
-              >
-                Subscribe
-              </button>
-            </div>
-          </form>
-
-          <p className="text-white/60 text-sm mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
         </div>
       </section>
 
