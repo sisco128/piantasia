@@ -33,7 +33,7 @@ export function Hero() {
               Unwind with Botanical Blends
             </h1>
             <h2 className="text-xl md:text-2xl text-white font-light mb-12 max-w-2xl mx-auto">
-              Botanical Blends Hand-crafted in Berlin
+              Small-batch. Handcrafted. Consciously made.
             </h2>
 
             {/* CTA Button */}
@@ -43,7 +43,7 @@ export function Hero() {
                 onClick={handleScrollToProducts}
                 className="bg-transparent border-2 border-white text-white px-10 py-2.5 rounded-lg hover:bg-white hover:text-[#2B5142] transition-all text-lg font-medium inline-block"
               >
-                Explore the Blends
+                Explore All Products
               </a>
             </div>
           </div>
