@@ -10,7 +10,29 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F5F2ED]">
       <Header />
-      {/* <Hero /> */}
+      <Hero />
+
+      {/* Benefits Section */}
+      <section id="benefits" className="py-20 bg-[#F5F2ED]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit) => (
+              <div 
+                key={benefit.id} 
+                className="bg-white p-4 rounded-2xl hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-base text-[#2B5142] font-semibold">{benefit.title}</h3>
+                  <div className="inline-flex items-center justify-center w-8 h-8 bg-[#8B7BA8]/20 rounded-full text-[#2B5142] flex-shrink-0">
+                    {benefit.icon}
+                  </div>
+                </div>
+                <p className="text-sm text-[#2B5142]/70">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Products Section */}
       <section id="products" className="py-20 bg-white">
@@ -30,33 +52,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="py-20 bg-[#F5F2ED]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl text-[#2B5142] mb-4">Why Choose Piantasia?</h2>
-            <p className="text-lg text-[#2B5142]/70 max-w-2xl mx-auto">
-              We're committed to providing the highest quality herbal alternatives
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit) => (
-              <div 
-                key={benefit.id} 
-                className="bg-white p-8 rounded-2xl text-center hover:shadow-lg transition-shadow"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#8B7BA8]/20 rounded-full text-[#2B5142] mb-4">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl text-[#2B5142] mb-2">{benefit.title}</h3>
-                <p className="text-[#2B5142]/70">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section id="about" className="py-20 bg-gradient-to-br from-[#8B7BA8]/10 to-[#C67C4F]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,13 +65,10 @@ export default function App() {
                 Our herbal smoking blends are crafted from carefully selected organic herbs and botanicals, 
                 offering a satisfying experience without the harmful effects of tobacco and nicotine.
               </p>
-              <p className="text-lg text-[#2B5142]/80 mb-6">
+              <p className="text-lg text-[#2B5142]/80">
                 Each blend is a result of extensive research and traditional herbal knowledge, 
                 combined with modern craftsmanship to ensure the perfect balance of flavor and quality.
               </p>
-              <button className="bg-[#2B5142] text-white px-8 py-4 rounded-full hover:bg-[#1F3B2F] transition-all transform hover:scale-105">
-                Our Story
-              </button>
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img 

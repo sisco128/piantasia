@@ -4,25 +4,25 @@ import { Benefit } from '@/types/product';
 export const benefits: Benefit[] = [
   {
     id: 'natural',
-    icon: <Leaf className="w-8 h-8" />,
+    icon: <Leaf className="w-4 h-4" />,
     title: "100% Natural",
     description: "All our blends are made from organic, sustainably sourced herbs"
   },
   {
     id: 'nicotine-free',
-    icon: <Heart className="w-8 h-8" />,
+    icon: <Heart className="w-4 h-4" />,
     title: "Nicotine-Free",
     description: "A healthier alternative without addictive substances"
   },
   {
     id: 'crafted',
-    icon: <Sparkles className="w-8 h-8" />,
+    icon: <Sparkles className="w-4 h-4" />,
     title: "Carefully Crafted",
     description: "Each blend is expertly formulated for optimal flavor and experience"
   },
   {
     id: 'quality-tested',
-    icon: <Shield className="w-8 h-8" />,
+    icon: <Shield className="w-4 h-4" />,
     title: "Quality Tested",
     description: "Rigorous testing ensures purity and safety in every package"
   }

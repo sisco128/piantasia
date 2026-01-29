@@ -26,9 +26,6 @@ export function Header() {
             <a href="#about" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
               About
             </a>
-            <a href="#benefits" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
-              Benefits
-            </a>
             <a href="#contact" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
               Contact
             </a>
@@ -40,7 +37,7 @@ export function Header() {
               href="https://www.etsy.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-[#2B5142] text-white px-6 py-2.5 rounded-full hover:bg-[#1F3B2F] transition-all flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2"
+              className="bg-[#2B5142] text-white px-6 py-2.5 rounded-lg hover:bg-[#1F3B2F] transition-all flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2"
               aria-label="Shop on Etsy (opens in new tab)"
             >
               <ShoppingCart className="w-5 h-5" aria-hidden="true" />
@@ -82,14 +79,6 @@ export function Header() {
                 role="menuitem"
               >
                 About
-              </a>
-              <a 
-                href="#benefits" 
-                className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded"
-                onClick={() => setMobileMenuOpen(false)}
-                role="menuitem"
-              >
-                Benefits
               </a>
               <a 
                 href="#contact" 

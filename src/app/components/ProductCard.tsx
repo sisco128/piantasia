@@ -25,7 +25,7 @@ export function ProductCard({ name, description, price, image, badge }: ProductC
         />
         {badge && (
           <span 
-            className="absolute top-4 right-4 bg-white text-[#2B5142] border border-[#2B5142] px-3 py-1 rounded-full text-sm font-medium"
+            className="absolute top-4 right-4 bg-white text-[#2B5142] border border-[#2B5142] px-3 py-1 rounded-lg text-sm font-medium"
             aria-label={`Badge: ${badge}`}
           >
             {badge}
@@ -45,7 +45,7 @@ export function ProductCard({ name, description, price, image, badge }: ProductC
         <div className="flex items-center justify-between mt-auto">
           <span className="text-2xl text-[#2B5142]" aria-label={`Price: ${price}`}>{price}</span>
           <button 
-            className="bg-[#2B5142] text-white p-3 rounded-full hover:bg-[#1F3B2F] transition-all transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2"
+            className="bg-[#2B5142] text-white px-3 py-2.5 rounded-lg hover:bg-[#1F3B2F] transition-all transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2"
             aria-label={`Add ${name} to cart`}
           >
             <ShoppingCart className="w-5 h-5" aria-hidden="true" />

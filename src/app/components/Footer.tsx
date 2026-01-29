@@ -39,12 +39,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#about" className="text-white/80 hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#benefits" className="text-white/80 hover:text-white transition-colors">
-                  Benefits
+                  About
                 </a>
               </li>
               <li>
