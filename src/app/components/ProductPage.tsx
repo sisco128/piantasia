@@ -48,24 +48,12 @@ export function ProductPage() {
         {/* S01 — Hero */}
         <section className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 py-12 md:py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16">
-            {/* Image column — 60% on desktop */}
-            <div className="lg:col-span-3 lg:sticky lg:top-24 lg:self-start space-y-4">
-              <div className="rounded-2xl overflow-hidden bg-white">
-                <ImageWithFallback
-                  src={product.images[0]}
-                  alt={product.name}
-                  className="w-full object-cover aspect-[4/3] lg:aspect-[4/5]"
-                />
-              </div>
-              {hasSecondImage && (
-                <div className="rounded-2xl overflow-hidden bg-white">
-                  <ImageWithFallback
-                    src={product.images[1]}
-                    alt={`${product.name} — detail`}
-                    className="w-full object-cover aspect-[16/9]"
-                  />
-                </div>
-              )}
+            <div className="lg:col-span-3">
+              <ImageWithFallback
+                src={product.images[0]}
+                alt={product.name}
+                className="w-full max-h-[700px] object-contain"
+              />
             </div>
 
             {/* Identity column — 40% on desktop */}
@@ -108,18 +96,31 @@ export function ProductPage() {
           </div>
         </section>
 
-        {/* S02 — Mood (conditional) */}
-        {product.moodLines && product.moodLines.length > 0 && (
+        {/* S02 — Mood / Landscape */}
+        {(hasSecondImage || (product.moodLines && product.moodLines.length > 0)) && (
           <section className="py-20 md:py-28 lg:py-36">
-            <div className="max-w-[640px] mx-auto px-6 sm:px-8 text-center space-y-4">
-              {product.moodLines.map((line, i) => (
-                <p
-                  key={i}
-                  className="font-sans text-lg lg:text-xl italic text-[#2B5142]/70"
-                >
-                  {line}
-                </p>
-              ))}
+            <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
+              {hasSecondImage && (
+                <div className="overflow-hidden rounded-2xl">
+                  <ImageWithFallback
+                    src={product.images[1]}
+                    alt={`${product.name} — botanical landscape`}
+                    className="w-full object-cover"
+                  />
+                </div>
+              )}
+              {product.moodLines && product.moodLines.length > 0 && (
+                <div className="max-w-[640px] mx-auto text-center mt-10 md:mt-12 space-y-4">
+                  {product.moodLines.map((line, i) => (
+                    <p
+                      key={i}
+                      className="font-sans text-lg lg:text-xl italic text-[#2B5142]/70"
+                    >
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              )}
             </div>
           </section>
         )}

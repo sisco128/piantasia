@@ -21,7 +21,7 @@ export const products: Product[] = [
       'For aromatic purposes only, store in a cool, dry place. Keep out of reach of children.',
     price: '€13',
     images: ['/blend_01-1.png', '/blend_01-2.png'],
-    buyUrl: '#',
+    buyUrl: 'https://buy.stripe.com/4gM9AMec974m78W47W1gs03',
   },
   {
     id: 'blend-02',
@@ -44,7 +44,7 @@ export const products: Product[] = [
     price: '€13',
     images: ['/blend_02-1.png', '/blend_02-2.png'],
     badge: 'Bestseller',
-    buyUrl: '#',
+    buyUrl: 'https://buy.stripe.com/14AaEQ7NLfASal86g41gs04',
   },
   {
     id: 'blend-03',
@@ -67,6 +67,6 @@ export const products: Product[] = [
     price: '€13',
     images: ['/blend_03-1.png', '/blend_03-2.png'],
     badge: 'New',
-    buyUrl: '#',
+    buyUrl: 'https://buy.stripe.com/00w3coaZX2O650O7k81gs05',
   },
 ];
