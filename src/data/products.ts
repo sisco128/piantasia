@@ -20,7 +20,8 @@ export const products: Product[] = [
     disclaimer:
       'For aromatic purposes only, store in a cool, dry place. Keep out of reach of children.',
     price: '€13',
-    image: '/menta.png',
+    images: ['/blend_01-1.png', '/blend_01-2.png'],
+    buyUrl: '#',
   },
   {
     id: 'blend-02',
@@ -41,8 +42,9 @@ export const products: Product[] = [
     disclaimer:
       'For aromatic purposes only, store in a cool, dry place. Keep out of reach of children.',
     price: '€13',
-    image: '/lavanda.png',
+    images: ['/blend_02-1.png', '/blend_02-2.png'],
     badge: 'Bestseller',
+    buyUrl: '#',
   },
   {
     id: 'blend-03',
@@ -63,7 +65,8 @@ export const products: Product[] = [
     disclaimer:
       'For aromatic purposes only, store in a cool, dry place. Keep out of reach of children.',
     price: '€13',
-    image: '/terra.png',
+    images: ['/blend_03-1.png', '/blend_03-2.png'],
     badge: 'New',
+    buyUrl: '#',
   },
 ];

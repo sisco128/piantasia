@@ -7,11 +7,11 @@ interface ProductCardProps {
   tagline: string;
   weight: string;
   price: string;
-  image: string;
+  images: string[];
   badge?: string;
 }
 
-export function ProductCard({ id, name, tagline, weight, price, image, badge }: ProductCardProps) {
+export function ProductCard({ id, name, tagline, weight, price, images, badge }: ProductCardProps) {
   return (
     <Link
       to={`/product/${id}`}
@@ -20,7 +20,7 @@ export function ProductCard({ id, name, tagline, weight, price, image, badge }: 
     >
       <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden bg-[#F5F2ED]">
         <ImageWithFallback
-          src={image}
+          src={images[0]}
           alt={name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
           loading="lazy"

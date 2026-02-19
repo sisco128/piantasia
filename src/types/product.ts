@@ -11,8 +11,23 @@ export interface Product {
   portions: string;
   disclaimer: string;
   price: string;
-  image: string;
+  images: string[];
   badge?: string;
+  buyUrl?: string;
+  descriptor?: string;
+  moodLines?: string[];
+  sensoryPyramid?: {
+    top: string;
+    heart: string;
+    base: string;
+  };
+  ingredientNotes?: Record<string, string>;
+  ritual?: {
+    when: string;
+    how: string;
+    time: string;
+    context: string;
+  };
 }
 
 export interface Benefit {
