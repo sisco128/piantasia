@@ -3,26 +3,26 @@ import { Instagram, Mail } from 'lucide-react';
 export function Footer() {
   return (
     <footer className="bg-[#2B5142] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {/* Brand */}
-          <div className="col-span-1 md:col-span-2">
-            <img src="/logo-piantasia.png" alt="Piantasia" className="h-12 w-auto mb-4" />
-            <p className="text-white/80 mb-4 max-w-md">
+          <div className="col-span-1 sm:col-span-2">
+            <img src="/logo-piantasia.png" alt="Piantasia" className="h-10 md:h-12 w-auto mb-4" />
+            <p className="text-white/80 text-sm md:text-base mb-4 max-w-md">
               Piantasia offers premium herbal blends as natural alternatives to traditional smoking. 
               All our products are organic, sustainably sourced, and crafted with care.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-2">
               <a 
                 href="https://www.instagram.com/Piantasia.eu/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white/80 hover:text-white transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-white/80 hover:text-white transition-colors"
                 aria-label="Follow us on Instagram (opens in new tab)"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a href="#" className="min-w-[44px] min-h-[44px] flex items-center justify-center text-white/80 hover:text-white transition-colors" aria-label="Email us">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -30,20 +30,20 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg mb-4">Quick Links</h4>
+            <h4 className="text-base md:text-lg mb-3 md:mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#products" className="text-white/80 hover:text-white transition-colors">
+                <a href="#products" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Products
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-colors">
+                <a href="#about" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   About
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-white/80 hover:text-white transition-colors">
+                <a href="#contact" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Contact
                 </a>
               </li>
@@ -52,25 +52,25 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="text-lg mb-4">Support</h4>
+            <h4 className="text-base md:text-lg mb-3 md:mb-4">Support</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="#" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="#" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Shipping
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="#" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Returns
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="#" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Privacy Policy
                 </a>
               </li>
@@ -78,8 +78,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="text-white/60 text-sm">
+        <div className="border-t border-white/20 mt-6 md:mt-8 pt-6 md:pt-8 text-center">
+          <p className="text-white/60 text-xs sm:text-sm">
             © 2026 Piantasia. All rights reserved. | This product is not intended to diagnose, treat, cure, or prevent any disease.
           </p>
         </div>
