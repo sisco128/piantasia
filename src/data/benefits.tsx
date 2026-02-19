@@ -1,4 +1,4 @@
-import { Heart, Leaf, Shield, Sparkles } from 'lucide-react';
+import { Heart, Leaf, Sparkles } from 'lucide-react';
 import { Benefit } from '@/types/product';
 
 export const benefits: Benefit[] = [
@@ -19,11 +19,5 @@ export const benefits: Benefit[] = [
     icon: <Sparkles className="w-4 h-4" />,
     title: "Carefully Crafted",
     description: "Each blend is expertly formulated for optimal flavor and experience"
-  },
-  {
-    id: 'quality-tested',
-    icon: <Shield className="w-4 h-4" />,
-    title: "Quality Tested",
-    description: "Rigorous testing ensures purity and safety in every package"
   }
 ];

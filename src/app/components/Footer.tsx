@@ -1,4 +1,4 @@
-import { Instagram, Mail } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -9,8 +9,7 @@ export function Footer() {
           <div className="col-span-1 sm:col-span-2">
             <img src="/logo-piantasia.png" alt="Piantasia" className="h-10 md:h-12 w-auto mb-4" />
             <p className="text-white/80 text-sm md:text-base mb-4 max-w-md">
-              Piantasia offers premium herbal blends as natural alternatives to traditional smoking. 
-              All our products are organic, sustainably sourced, and crafted with care.
+              Piantasia offers premium herbal blends as natural alternatives. All our products are organic, sustainably sourced, and crafted with care.
             </p>
             <div className="flex space-x-2">
               <a 
@@ -22,9 +21,6 @@ export function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="min-w-[44px] min-h-[44px] flex items-center justify-center text-white/80 hover:text-white transition-colors" aria-label="Email us">
-                <Mail className="w-5 h-5" />
-              </a>
             </div>
           </div>
 
@@ -33,44 +29,29 @@ export function Footer() {
             <h4 className="text-base md:text-lg mb-3 md:mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#products" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                <a href="/#products" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Products
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                <a href="/#about" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   About
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                <a href="/#contact" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Contact
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Legal */}
           <div>
-            <h4 className="text-base md:text-lg mb-3 md:mb-4">Support</h4>
+            <h4 className="text-base md:text-lg mb-3 md:mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
-                  Shipping
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
-                  Returns
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                <a href="/privacy" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Privacy Policy
                 </a>
               </li>

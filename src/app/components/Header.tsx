@@ -20,13 +20,13 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" aria-label="Main navigation">
-            <a href="#products" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
+            <a href="/#products" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
               Products
             </a>
-            <a href="#about" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
+            <a href="/#about" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
               About
             </a>
-            <a href="#contact" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
+            <a href="/#contact" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
               Contact
             </a>
           </nav>
@@ -51,7 +51,7 @@ export function Header() {
         >
           <div className="flex flex-col space-y-4" role="menu">
             <a 
-              href="#products" 
+              href="/#products" 
               className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
               onClick={() => setMobileMenuOpen(false)}
               role="menuitem"
@@ -59,7 +59,7 @@ export function Header() {
               Products
             </a>
             <a 
-              href="#about" 
+              href="/#about" 
               className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
               onClick={() => setMobileMenuOpen(false)}
               role="menuitem"
@@ -67,7 +67,7 @@ export function Header() {
               About
             </a>
             <a 
-              href="#contact" 
+              href="/#contact" 
               className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
               onClick={() => setMobileMenuOpen(false)}
               role="menuitem"

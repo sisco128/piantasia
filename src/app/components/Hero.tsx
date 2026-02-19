@@ -33,7 +33,7 @@ export function Hero() {
               Unwind with Botanical Blends
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-white font-light mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto">
-              Small-batch. Handcrafted. Consciously made.
+              Hand-crafted from selected dried plants, designed with balance in mind.
             </h2>
 
             {/* CTA Button */}

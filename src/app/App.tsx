@@ -3,6 +3,7 @@ import { Header } from '@/app/components/Header';
 import { Hero } from '@/app/components/Hero';
 import { ProductCard } from '@/app/components/ProductCard';
 import { ProductPage } from '@/app/components/ProductPage';
+import { PrivacyPolicy } from '@/app/components/PrivacyPolicy';
 import { Footer } from '@/app/components/Footer';
 import { products } from '@/data/products';
 import { benefits } from '@/data/benefits';
@@ -16,7 +17,7 @@ function HomePage() {
       {/* Benefits Section */}
       <section id="benefits" className="py-12 md:py-16 lg:py-20 bg-[#F5F2ED]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {benefits.map((benefit) => (
               <div 
                 key={benefit.id} 
@@ -59,16 +60,18 @@ function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#2B5142] mb-4 md:mb-6">
-                Nature's Answer to Healthy Living
+                A place made of plants.
               </h2>
               <p className="text-base md:text-lg text-[#2B5142]/80 mb-4 md:mb-6">
-                At Piantasia, we believe in the power of nature to provide healthier alternatives. 
-                Our herbal smoking blends are crafted from carefully selected organic herbs and botanicals, 
-                offering a satisfying experience without the harmful effects of tobacco and nicotine.
+                Piantasia began from a moment of pause. A pause from nicotine and from automatic habits.
+                The intention was to preserve the gesture and the social moment, while paying closer attention to ingredients and materials.
+              </p>
+              <p className="text-base md:text-lg text-[#2B5142]/80 mb-4 md:mb-6">
+                Rooted in a long-standing interest in plants and creativity, the idea gradually took form.
+                Leaves, textures and balanced aromas came together with care.
               </p>
               <p className="text-base md:text-lg text-[#2B5142]/80">
-                Each blend is a result of extensive research and traditional herbal knowledge, 
-                combined with modern craftsmanship to ensure the perfect balance of flavor and quality.
+                What began as a personal shift became a small botanical world.
               </p>
             </div>
             <div className="relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
@@ -82,6 +85,26 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="py-16 md:py-20 lg:py-28 bg-[#F5F2ED]">
+        <div className="max-w-[640px] mx-auto px-6 sm:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#2B5142] mb-4 md:mb-6">
+            Get in touch
+          </h2>
+          <p className="font-sans text-base md:text-lg text-[#2B5142]/60 mb-8 md:mb-10">
+            Questions, ideas or just want to say hello? Reach out on Instagram.
+          </p>
+          <a
+            href="https://www.instagram.com/Piantasia.eu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#2B5142] text-white font-sans text-base font-medium px-10 py-4 rounded-full hover:bg-[#1F3B2F] transition-colors"
+          >
+            Message us on Instagram
+          </a>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
@@ -92,6 +115,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/product/:id" element={<ProductPage />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
     </Routes>
   );
 }

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { products } from '@/data/products';
@@ -8,6 +9,10 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
   const product = products.find((p) => p.id === id);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!product) {
     return (
@@ -26,8 +31,6 @@ export function ProductPage() {
       </div>
     );
   }
-
-  const hasSecondImage = product.images.length > 1;
 
   return (
     <div className="min-h-screen bg-[#F5F2ED]">
@@ -96,31 +99,18 @@ export function ProductPage() {
           </div>
         </section>
 
-        {/* S02 — Mood / Landscape */}
-        {(hasSecondImage || (product.moodLines && product.moodLines.length > 0)) && (
+        {/* S02 — Mood (conditional) */}
+        {product.moodLines && product.moodLines.length > 0 && (
           <section className="py-20 md:py-28 lg:py-36">
-            <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
-              {hasSecondImage && (
-                <div className="overflow-hidden rounded-2xl">
-                  <ImageWithFallback
-                    src={product.images[1]}
-                    alt={`${product.name} — botanical landscape`}
-                    className="w-full object-cover"
-                  />
-                </div>
-              )}
-              {product.moodLines && product.moodLines.length > 0 && (
-                <div className="max-w-[640px] mx-auto text-center mt-10 md:mt-12 space-y-4">
-                  {product.moodLines.map((line, i) => (
-                    <p
-                      key={i}
-                      className="font-sans text-lg lg:text-xl italic text-[#2B5142]/70"
-                    >
-                      {line}
-                    </p>
-                  ))}
-                </div>
-              )}
+            <div className="max-w-[640px] mx-auto px-6 sm:px-8 text-center space-y-4">
+              {product.moodLines.map((line, i) => (
+                <p
+                  key={i}
+                  className="font-sans text-lg lg:text-xl italic text-[#2B5142]/70"
+                >
+                  {line}
+                </p>
+              ))}
             </div>
           </section>
         )}
