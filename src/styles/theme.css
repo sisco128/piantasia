@@ -79,7 +79,8 @@
 }
 
 @theme inline {
-  --font-family-sans: 'DM Sans', sans-serif;
+  --font-family-sans: 'Zen Kaku Gothic New', sans-serif;
+  --font-family-heading: 'Fraunces', serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -127,7 +128,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 400;
     letter-spacing: -0.01em;
   }
@@ -140,6 +141,10 @@
   html {
     font-size: var(--font-size);
     scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
   }
 
   h1 {

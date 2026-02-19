@@ -3,7 +3,13 @@ import { ReactNode } from 'react';
 export interface Product {
   id: string;
   name: string;
-  description: string;
+  tagline: string;
+  tastingNotes: string;
+  ingredients: string[];
+  origin: string;
+  weight: string;
+  portions: string;
+  disclaimer: string;
   price: string;
   image: string;
   badge?: string;

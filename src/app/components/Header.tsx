@@ -1,4 +1,4 @@
-import { ShoppingCart, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export function Header() {
@@ -10,11 +10,11 @@ export function Header() {
         Skip to main content
       </a>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" aria-label="Piantasia - Go to homepage">
-              <img src="/logo-piantasia.png" alt="Piantasia logo" className="h-16 w-auto" />
+              <img src="/logo-piantasia.png" alt="Piantasia logo" className="h-12 md:h-16 w-auto" />
             </a>
           </div>
 
@@ -31,66 +31,51 @@ export function Header() {
             </a>
           </nav>
 
-          {/* Cart & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
-            <a 
-              href="https://www.etsy.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-[#2B5142] text-white px-6 py-2.5 rounded-lg hover:bg-[#1F3B2F] transition-all flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2"
-              aria-label="Shop on Etsy (opens in new tab)"
-            >
-              <ShoppingCart className="w-5 h-5" aria-hidden="true" />
-              <span className="hidden sm:inline">Shop on Etsy</span>
-            </a>
-            
-            <button 
-              className="md:hidden p-2 text-[#2B5142] focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-menu"
-              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden p-[10px] text-[#2B5142] focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav 
-            id="mobile-menu"
-            className="md:hidden py-4 border-t border-[#2B5142]/10"
-            aria-label="Mobile navigation"
-          >
-            <div className="flex flex-col space-y-4" role="menu">
-              <a 
-                href="#products" 
-                className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded"
-                onClick={() => setMobileMenuOpen(false)}
-                role="menuitem"
-              >
-                Products
-              </a>
-              <a 
-                href="#about" 
-                className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded"
-                onClick={() => setMobileMenuOpen(false)}
-                role="menuitem"
-              >
-                About
-              </a>
-              <a 
-                href="#contact" 
-                className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded"
-                onClick={() => setMobileMenuOpen(false)}
-                role="menuitem"
-              >
-                Contact
-              </a>
-            </div>
-          </nav>
-        )}
+        <nav 
+          id="mobile-menu"
+          className={`md:hidden border-t border-[#2B5142]/10 overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-60 py-4 opacity-100' : 'max-h-0 py-0 opacity-0'}`}
+          aria-label="Mobile navigation"
+        >
+          <div className="flex flex-col space-y-4" role="menu">
+            <a 
+              href="#products" 
+              className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
+              onClick={() => setMobileMenuOpen(false)}
+              role="menuitem"
+            >
+              Products
+            </a>
+            <a 
+              href="#about" 
+              className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
+              onClick={() => setMobileMenuOpen(false)}
+              role="menuitem"
+            >
+              About
+            </a>
+            <a 
+              href="#contact" 
+              className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
+              onClick={() => setMobileMenuOpen(false)}
+              role="menuitem"
+            >
+              Contact
+            </a>
+          </div>
+        </nav>
       </div>
     </header>
   );
