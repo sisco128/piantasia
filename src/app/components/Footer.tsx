@@ -1,4 +1,5 @@
 import { Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
@@ -51,9 +52,9 @@ export function Footer() {
             <h4 className="text-base md:text-lg mb-3 md:mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/privacy" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                <Link to="/privacy" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
