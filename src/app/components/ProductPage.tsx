@@ -5,6 +5,7 @@ import { products } from '@/data/products';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ProductCard } from './ProductCard';
 
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -31,6 +32,8 @@ export function ProductPage() {
       </div>
     );
   }
+
+  const otherProducts = products.filter((p) => p.id !== product.id);
 
   return (
     <div className="min-h-screen bg-[#F5F2ED]">
@@ -243,6 +246,22 @@ export function ProductPage() {
               >
                 Add to ritual
               </a>
+            </div>
+          </section>
+        )}
+
+        {/* More blends */}
+        {otherProducts.length > 0 && (
+          <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
+            <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
+              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-10">
+                More blends
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+                {otherProducts.map((p) => (
+                  <ProductCard key={p.id} {...p} />
+                ))}
+              </div>
             </div>
           </section>
         )}
