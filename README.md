@@ -43,10 +43,19 @@ cd apps/api && npm run type-check
 
 ## Deploying
 
-### Vercel (two projects)
+### Vercel — Frontend (one project for the site)
 
-1. **Frontend** — New project, import this repo. Leave **Root Directory** empty (repo root). The root `vercel.json` sets build to `npm run build` and output to `apps/web/dist`. Deploy.
-2. **API** — New project, import this repo, set **Root Directory** to `apps/api`. Deploy.
+1. In the project: **Settings → General**.
+2. Set **Root Directory** to **empty** (clear it; use repo root). Do **not** set `apps/web`.
+3. Leave **Build Command** and **Output Directory** blank so root `vercel.json` is used.
+4. Optional: set **Node.js Version** to **20.x**.
+5. **Redeploy** (Deployments → Redeploy).
+
+**Local dev** (unchanged): from repo root run `npm install`, then `cd apps/web && npm run dev`.
+
+### Vercel — API (separate project)
+
+1. New project, same repo. Set **Root Directory** to `apps/api`. Deploy.
 
 Building the frontend from the repo root ensures the root lockfile is used and Rollup’s Linux binaries install correctly on Vercel.
 
