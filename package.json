@@ -1,5 +1,8 @@
 {
   "name": "piantasia",
   "private": true,
-  "workspaces": ["apps/*"]
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "build": "npm run build --workspace=@piantasia/web"
+  }
 }

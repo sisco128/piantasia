@@ -45,10 +45,10 @@ cd apps/api && npm run type-check
 
 ### Vercel (two projects)
 
-1. **Frontend** — New project, import this repo, set **Root Directory** to `apps/web`. Deploy.
+1. **Frontend** — New project, import this repo. Leave **Root Directory** empty (repo root). The root `vercel.json` sets build to `npm run build` and output to `apps/web/dist`. Deploy.
 2. **API** — New project, import this repo, set **Root Directory** to `apps/api`. Deploy.
 
-If the frontend build fails with `MODULE_NOT_FOUND` for Rollup’s `native.js`, the project already pins Rollup’s Linux optional dependencies. If it still fails, set the project’s **Node.js version** to **20.x** (e.g. in Vercel → Settings → General → Node.js Version).
+Building the frontend from the repo root ensures the root lockfile is used and Rollup’s Linux binaries install correctly on Vercel.
 
 The API project will expose the webhook at:  
 `https://<your-api-project>.vercel.app/api/stripe-webhook`
