@@ -12,7 +12,7 @@ export const benefits: Benefit[] = [
     id: 'nicotine-free',
     icon: <Heart className="w-4 h-4" />,
     title: "Nicotine-Free",
-    description: "A healthier alternative without addictive substances"
+    description: "A botanical alternative without addictive substances"
   },
   {
     id: 'crafted',

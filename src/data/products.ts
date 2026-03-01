@@ -21,7 +21,7 @@ export const products: Product[] = [
     disclaimer:
       'For aromatic purposes only, store in a cool, dry place. Keep out of reach of children.',
     price: '€13',
-    images: ['/blend_01-1.png', '/blend_01-2.png'],
+    images: ['/blend_01-1.png', '/blend_01-2.png', '/blend_01-3.png', '/blend_01-4.png'],
     buyUrl: 'https://buy.stripe.com/4gM9AMec974m78W47W1gs03',
     description:
       'Blend 01 is built around peppermint and soft leafy textures.\n\nLight and clear in character, with a gentle cooling nuance, it carries a fresh green profile reminiscent of shaded gardens and early mornings.\n\nThe texture is soft and fluffy, offering an even, balanced consistency and a clean aromatic expression.',
@@ -46,7 +46,7 @@ export const products: Product[] = [
     disclaimer:
       'For aromatic purposes only, store in a cool, dry place. Keep out of reach of children.',
     price: '€13',
-    images: ['/blend_02-1.png', '/blend_02-2.png'],
+    images: ['/blend_02-1.png', '/blend_02-2.png', '/blend_02-3.png', '/blend_02-4.png'],
     badge: 'Bestseller',
     buyUrl: 'https://buy.stripe.com/14AaEQ7NLfASal86g41gs04',
     description:
@@ -72,7 +72,7 @@ export const products: Product[] = [
     disclaimer:
       'For aromatic purposes only, store in a cool, dry place. Keep out of reach of children.',
     price: '€13',
-    images: ['/blend_03-1.png', '/blend_03-2.png'],
+    images: ['/blend_03-1.png', '/blend_03-2.png', '/blend_03-3.png', '/blend_03-4.png'],
     badge: 'New',
     buyUrl: 'https://buy.stripe.com/00w3coaZX2O650O7k81gs05',
     description:

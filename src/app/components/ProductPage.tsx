@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { products } from '@/data/products';
@@ -6,14 +6,36 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ProductCard } from './ProductCard';
+import Fade from 'embla-carousel-fade';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from './ui/carousel';
 
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
   const product = products.find((p) => p.id === id);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
+  const carouselApiRef = useRef<CarouselApi | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
+
+  useEffect(() => {
+    if (product?.id) setSelectedIndex(0);
+  }, [product?.id]);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+    const onSelect = () => setSelectedIndex(carouselApi.selectedScrollSnap());
+    onSelect();
+    carouselApi.on('select', onSelect);
+    return () => carouselApi.off('select', onSelect);
+  }, [carouselApi]);
 
   if (!product) {
     return (
@@ -54,12 +76,84 @@ export function ProductPage() {
         {/* S01 — Hero */}
         <section className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 py-8 md:py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16">
-            <div className="lg:col-span-3 h-[42vh] max-h-[280px] lg:h-[500px] lg:max-h-[700px] overflow-hidden flex items-center justify-center bg-[#F5F2ED]">
-              <ImageWithFallback
-                src={product.images[0]}
-                alt={product.name}
-                className="w-full h-full object-cover object-center"
-              />
+            <div className="lg:col-span-3">
+              {product.images.length <= 1 ? (
+                <div className="h-[42vh] max-h-[280px] lg:h-[500px] lg:max-h-[700px] overflow-hidden flex items-center justify-center bg-[#F5F2ED]">
+                  <ImageWithFallback
+                    src={product.images[0]}
+                    alt={product.name}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              ) : (
+                <div className="flex flex-col gap-0">
+                  <div className="relative h-[42vh] max-h-[280px] lg:h-[500px] lg:max-h-[700px] overflow-hidden bg-[#F5F2ED] shrink-0">
+                    <Carousel
+                      className="h-full"
+                      opts={{ loop: true }}
+                      plugins={[Fade()]}
+                      setApi={(api) => {
+                        carouselApiRef.current = api;
+                        setCarouselApi(api);
+                      }}
+                    >
+                      <CarouselContent className="h-full -ml-0">
+                        {product.images.map((src, i) => (
+                          <CarouselItem
+                            key={i}
+                            className="pl-0 h-full"
+                          >
+                            <ImageWithFallback
+                              src={src}
+                              alt={`${product.name} ${i + 1}`}
+                              className="w-full h-full object-cover object-center"
+                            />
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                    </Carousel>
+                  </div>
+                  <div className="flex md:hidden items-center justify-center gap-2 pt-3 pb-1 shrink-0">
+                    {product.images.map((_, i) => (
+                      <button
+                        type="button"
+                        key={i}
+                        onClick={() => carouselApiRef.current?.scrollTo(i)}
+                        className={`rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2B5142] focus-visible:ring-offset-2 ${
+                          i === selectedIndex
+                            ? 'w-2.5 h-2.5 bg-[#2B5142]'
+                            : 'w-2 h-2 bg-[#2B5142]/30 hover:bg-[#2B5142]/50'
+                        }`}
+                        aria-label={`Go to image ${i + 1}`}
+                        aria-current={i === selectedIndex ? 'true' : undefined}
+                      />
+                    ))}
+                  </div>
+                  <div className="hidden md:flex gap-2 overflow-x-auto pt-3 pb-1 shrink-0">
+                    {product.images.map((src, i) => (
+                      <button
+                        type="button"
+                        key={i}
+                        onMouseEnter={() => carouselApiRef.current?.scrollTo(i)}
+                        onClick={() => carouselApiRef.current?.scrollTo(i)}
+                        className={`shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden border-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2B5142] focus-visible:ring-offset-2 ${
+                          i === selectedIndex
+                            ? 'border-[#2B5142]'
+                            : 'border-transparent opacity-80 hover:opacity-100'
+                        }`}
+                        aria-label={`View image ${i + 1}`}
+                        aria-pressed={i === selectedIndex}
+                      >
+                        <ImageWithFallback
+                          src={src}
+                          alt=""
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Identity column — 40% on desktop */}
