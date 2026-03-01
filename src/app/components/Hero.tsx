@@ -18,7 +18,7 @@ export function Hero() {
             Rethink the gesture
           </h1>
           <h2 className="font-sans text-lg sm:text-xl md:text-2xl text-[#2B5142] font-light mb-6 sm:mb-8 md:mb-12 text-left">
-            Tobacco free herbal blends designed to turn a habit into a choice.
+            Tobacco free herbal blends designed to turn a habit into a ritual.
           </h2>
           <div className="flex justify-start">
             <a

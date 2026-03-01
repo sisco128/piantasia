@@ -1,4 +1,4 @@
-import { Instagram } from 'lucide-react';
+import { Instagram, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
             <p className="text-white/80 text-sm md:text-base mb-4 max-w-md">
               Piantasia offers premium herbal blends as natural alternatives. All our products are organic, sustainably sourced, and crafted with care.
             </p>
-            <div className="flex space-x-2">
+            <div className="flex items-center space-x-2">
               <a 
                 href="https://www.instagram.com/Piantasia.eu/" 
                 target="_blank" 
@@ -21,6 +21,13 @@ export function Footer() {
                 aria-label="Follow us on Instagram (opens in new tab)"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="mailto:hello@piantasia.eu"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-white/80 hover:text-white transition-colors"
+                aria-label="Email hello@piantasia.eu"
+              >
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>

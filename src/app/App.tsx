@@ -121,7 +121,7 @@ function HomePage() {
             Get in touch
           </h2>
           <p className="font-sans text-base md:text-lg text-[#2B5142]/60 mb-8 md:mb-10">
-            Questions, ideas or just want to say hello? Reach out on Instagram.
+            Reach out on Instagram or write to hello@piantasia.eu
           </p>
           <a
             href="https://www.instagram.com/Piantasia.eu/"
