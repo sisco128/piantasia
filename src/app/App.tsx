@@ -77,8 +77,8 @@ function HomePage() {
             </div>
             <div className="relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1682845509612-57ffca78c0e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXR1cmFsJTIwcGxhbnRzJTIwbGVhdmVzfGVufDF8fHx8MTc2ODkzNjc0OXww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Natural herbs"
+                src="/home-about-1.png"
+                alt="About Piantasia"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -88,8 +88,8 @@ function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <div className="relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1682845509612-57ffca78c0e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXR1cmFsJTIwcGxhbnRzJTIwbGVhdmVzfGVufDF8fHx8MTc2ODkzNjc0OXww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Botanical exploration"
+                src="/home-about-2.png"
+                alt="The name Piantasia"
                 className="w-full h-full object-cover"
               />
             </div>
