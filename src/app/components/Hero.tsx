@@ -10,44 +10,35 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[70vh] md:min-h-screen overflow-hidden">
-      {/* Hero Background */}
-      <div className="absolute inset-0">
-        <div className="relative min-h-[70vh] md:min-h-screen w-full h-full overflow-hidden">
-          <img 
-            src={heroImage} 
-            alt="Hero background" 
-            className="w-full h-full object-cover animate-zoom-out"
-          />
-          {/* Dark overlay mask for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+    <section className="grid grid-cols-1 md:grid-cols-2 min-h-[50vh] md:min-h-[70vh]">
+      {/* Left column — copy */}
+      <div className="bg-[#F5F2ED] flex flex-col justify-center px-6 sm:px-8 lg:px-12 py-12 md:py-16 order-1">
+        <div className="max-w-xl">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold text-[#2B5142] mb-4 sm:mb-6 leading-tight tracking-tight text-left">
+            Rethink the gesture
+          </h1>
+          <h2 className="font-sans text-lg sm:text-xl md:text-2xl text-[#2B5142] font-light mb-6 sm:mb-8 md:mb-12 text-left">
+            Tobacco free herbal blends designed to turn a habit into a choice.
+          </h2>
+          <div className="flex justify-start">
+            <a
+              href="#products"
+              onClick={handleScrollToProducts}
+              className="inline-flex items-center justify-center bg-[#2B5142] text-white font-sans text-base font-medium px-10 py-4 rounded-full hover:bg-[#1F3B2F] transition-colors"
+            >
+              Explore All Products
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 h-full min-h-[70vh] md:min-h-screen flex items-center justify-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-center">
-            {/* Tagline */}
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold text-white mb-4 sm:mb-6 max-w-4xl mx-auto leading-tight tracking-tight">
-              Unwind with Botanical Blends
-            </h1>
-            <h2 className="font-sans text-lg sm:text-xl md:text-2xl text-white font-light mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto">
-              Hand-crafted from selected dried plants, designed with balance in mind.
-            </h2>
-
-            {/* CTA Button */}
-            <div className="flex justify-center items-center">
-              <a 
-                href="#products" 
-                onClick={handleScrollToProducts}
-                className="inline-flex items-center justify-center bg-[#2B5142] text-white font-sans text-base font-medium px-10 py-4 rounded-full hover:bg-[#1F3B2F] transition-colors"
-              >
-                Explore All Products
-              </a>
-            </div>
-          </div>
-        </div>
+      {/* Right column — image */}
+      <div className="relative min-h-[50vh] md:min-h-[70vh] h-full overflow-hidden order-2">
+        <img
+          src={heroImage}
+          alt="Hero"
+          className="absolute inset-0 w-full h-full object-cover animate-zoom-out"
+        />
       </div>
     </section>
   );

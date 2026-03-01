@@ -23,7 +23,7 @@ export function ProductPage() {
           <h1 className="text-3xl text-[#2B5142] mb-4">Product not found</h1>
           <Link
             to="/#products"
-            className="text-[#8B7BA8] hover:text-[#2B5142] transition-colors underline"
+            className="font-sans text-[#8B7BA8] hover:text-[#2B5142] transition-colors underline"
           >
             Back to all products
           </Link>
@@ -41,10 +41,10 @@ export function ProductPage() {
 
       <main>
         {/* Back link */}
-        <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 pt-6 md:pt-10">
+        <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 pt-4 md:pt-6">
           <Link
             to="/#products"
-            className="inline-flex items-center gap-2 text-[#2B5142]/50 hover:text-[#2B5142] transition-colors text-sm"
+            className="font-sans inline-flex items-center gap-2 text-[#2B5142]/75 hover:text-[#2B5142] transition-colors text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             All products
@@ -52,20 +52,20 @@ export function ProductPage() {
         </div>
 
         {/* S01 — Hero */}
-        <section className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 py-12 md:py-20 lg:py-28">
+        <section className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 py-8 md:py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16">
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 h-[42vh] max-h-[280px] lg:h-[500px] lg:max-h-[700px] overflow-hidden flex items-center justify-center bg-[#F5F2ED]">
               <ImageWithFallback
                 src={product.images[0]}
                 alt={product.name}
-                className="w-full max-h-[700px] object-contain"
+                className="w-full h-full object-cover object-center"
               />
             </div>
 
             {/* Identity column — 40% on desktop */}
             <div className="lg:col-span-2 flex flex-col justify-center">
               {product.badge && (
-                <span className="inline-block text-xs uppercase tracking-widest text-[#8B7BA8] mb-4">
+                <span className="font-sans inline-block text-xs uppercase tracking-widest text-[#8B7BA8] mb-4">
                   {product.badge}
                 </span>
               )}
@@ -74,19 +74,21 @@ export function ProductPage() {
                 {product.name}
               </h1>
 
-              {/* L2 — Descriptor (tastingNotes) */}
-              <p className="font-sans text-xl lg:text-2xl text-[#2B5142] mb-3">
+              {/* Hero line — single style (L2) */}
+              <p className="font-sans text-xl lg:text-2xl text-[#2B5142] mb-6">
                 {product.descriptor || product.tastingNotes}
               </p>
 
-              {/* L3 — Narrative (tagline) */}
-              <p className="font-sans text-base lg:text-lg text-[#2B5142]/60 mb-10">
-                {product.tagline}
-              </p>
-
-              <p className="font-heading text-3xl lg:text-4xl text-[#2B5142] mb-6">
-                {product.price}
-              </p>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-6">
+                <p className="font-heading text-3xl lg:text-4xl text-[#2B5142]">
+                  {product.price}
+                </p>
+                {(product.weight || product.portions) && (
+                  <p className="font-sans text-base text-[#2B5142]/70 text-right">
+                    {[product.weight, product.portions].filter(Boolean).join(' · ')}
+                  </p>
+                )}
+              </div>
 
               {product.buyUrl && (
                 <a
@@ -122,13 +124,13 @@ export function ProductPage() {
         {product.sensoryPyramid && (
           <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
             <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
-              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-10">
+              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-10">
                 Sensory Profile
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 {(['top', 'heart', 'base'] as const).map((layer) => (
                   <div key={layer}>
-                    <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/40 mb-2">
+                    <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/65 mb-2">
                       {layer}
                     </p>
                     <p className="font-sans text-base text-[#2B5142]">
@@ -145,20 +147,20 @@ export function ProductPage() {
         {product.ingredients.length > 0 && (
           <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
             <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
-              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-10">
+              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-10">
                 Botanical Composition
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-3 sm:gap-y-4 md:gap-y-5">
                 {product.ingredients.map((ingredient) => (
                   <div
                     key={ingredient}
-                    className="border-b border-[#2B5142]/[0.06] pb-4"
+                    className="border-b border-[#2B5142]/[0.06] pb-3 sm:pb-4"
                   >
                     <p className="font-sans text-base text-[#2B5142]">
                       {ingredient}
                     </p>
                     {product.ingredientNotes?.[ingredient] && (
-                      <p className="font-sans text-sm text-[#2B5142]/50 mt-1">
+                      <p className="font-sans text-sm text-[#2B5142]/75 mt-1">
                         {product.ingredientNotes[ingredient]}
                       </p>
                     )}
@@ -169,17 +171,60 @@ export function ProductPage() {
           </section>
         )}
 
+        {/* Description */}
+        {product.description && (
+          <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
+            <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
+              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-10">
+                Description
+              </p>
+              <div className="space-y-6">
+                {product.description
+                  .split(/\n\n+/)
+                  .filter(Boolean)
+                  .map((paragraph, i) => (
+                    <p
+                      key={i}
+                      className="font-sans text-base text-[#2B5142] leading-relaxed"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* How to Use */}
+        <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
+          <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
+            <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-10">
+              How to Use
+            </p>
+            <div className="space-y-4">
+              <p className="font-sans text-base text-[#2B5142] leading-relaxed">
+                Our blends are hand crafted in small batches, gently cleaned from
+                excess stems and lightly milled for a soft, workable texture.
+              </p>
+              <p className="font-sans text-base text-[#2B5142] leading-relaxed">
+                Ready to use for your personal rituals, either on their own or
+                combined with other herbs.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* S05 — Ritual (conditional) */}
         {product.ritual && (
           <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
             <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
-              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-10">
+              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-10">
                 Ritual
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 {(['when', 'how', 'time', 'context'] as const).map((field) => (
                   <div key={field}>
-                    <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/40 mb-2">
+                    <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/65 mb-2">
                       {field}
                     </p>
                     <p className="font-sans text-base text-[#2B5142]">
@@ -192,44 +237,22 @@ export function ProductPage() {
           </section>
         )}
 
-        {/* S06 — Object & Materiality */}
+        {/* Sourcing */}
         <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
           <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
-            <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-10">
-              Object
+            <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-10">
+              Sourcing
             </p>
             <div className="space-y-4">
-              {product.origin && (
-                <p className="font-sans text-base text-[#2B5142]">
-                  {product.origin}
-                </p>
-              )}
-              <div className="flex flex-wrap gap-x-10 gap-y-2">
-                {product.weight && (
-                  <p className="font-sans text-base text-[#2B5142]/70">
-                    {product.weight}
-                  </p>
-                )}
-                {product.portions && (
-                  <p className="font-sans text-base text-[#2B5142]/70">
-                    {product.portions}
-                  </p>
-                )}
-              </div>
+              <p className="font-sans text-base text-[#2B5142] leading-relaxed">
+                The herbs are sourced from Italy and Germany. Certified organic quality, free from pesticides, additives and artificial ingredients.
+              </p>
+              <p className="font-sans text-base text-[#2B5142] leading-relaxed">
+                For aromatic and ritual use only. Not intended for medical purposes. Store in a cool, dry place. Keep out of reach of children.
+              </p>
             </div>
           </div>
         </section>
-
-        {/* S07 — Disclaimer */}
-        {product.disclaimer && (
-          <section className="py-8 md:py-10 border-t border-[#2B5142]/10">
-            <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
-              <p className="font-sans text-xs text-[#2B5142]/30 leading-relaxed max-w-[640px]">
-                {product.disclaimer}
-              </p>
-            </div>
-          </section>
-        )}
 
         {/* S08 — Secondary CTA */}
         {product.buyUrl && (
@@ -254,7 +277,7 @@ export function ProductPage() {
         {otherProducts.length > 0 && (
           <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
             <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
-              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-10">
+              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-10">
                 More blends
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">

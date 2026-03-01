@@ -16,7 +16,7 @@ export function PrivacyPolicy() {
       <main className="max-w-[800px] mx-auto px-6 sm:px-8 lg:px-12 py-12 md:py-20">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-[#2B5142]/50 hover:text-[#2B5142] transition-colors text-sm mb-10"
+          className="inline-flex items-center gap-2 text-[#2B5142]/75 hover:text-[#2B5142] transition-colors text-sm mb-10"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to homepage
@@ -26,13 +26,13 @@ export function PrivacyPolicy() {
           Privacy Policy
         </h1>
 
-        <p className="font-sans text-sm text-[#2B5142]/50 mb-12">
+        <p className="font-sans text-sm text-[#2B5142]/75 mb-12">
           Last updated: February 2026
         </p>
 
         <div className="space-y-10">
           <section>
-            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-4">
+            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
               Overview
             </h2>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
@@ -41,7 +41,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-4">
+            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
               What we collect
             </h2>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed mb-4">
@@ -53,7 +53,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-4">
+            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
               Payment processing
             </h2>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed mb-4">
@@ -73,7 +73,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-4">
+            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
               How we use your data
             </h2>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
@@ -82,7 +82,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-4">
+            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
               Data sharing
             </h2>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
@@ -91,7 +91,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-4">
+            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
               Your rights
             </h2>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
@@ -108,7 +108,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/50 mb-4">
+            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
               Changes to this policy
             </h2>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">

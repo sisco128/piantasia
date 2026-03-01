@@ -5,18 +5,21 @@ interface ProductCardProps {
   id: string;
   name: string;
   tagline: string;
+  descriptor?: string;
+  tastingNotes?: string;
   weight: string;
   price: string;
   images: string[];
   badge?: string;
 }
 
-export function ProductCard({ id, name, tagline, weight, price, images, badge }: ProductCardProps) {
+export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weight, price, images, badge }: ProductCardProps) {
+  const subtitle = descriptor || tastingNotes || tagline;
   return (
     <Link
       to={`/product/${id}`}
       className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2"
-      aria-label={`${name} — ${tagline || 'View product'}`}
+      aria-label={`${name} — ${subtitle || 'View product'}`}
     >
       <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden bg-[#F5F2ED]">
         <ImageWithFallback
@@ -36,8 +39,8 @@ export function ProductCard({ id, name, tagline, weight, price, images, badge }:
 
       <div className="p-4 md:p-6 flex flex-col flex-grow">
         <h3 className="text-lg md:text-xl text-[#2B5142] mb-1">{name}</h3>
-        {tagline && (
-          <p className="text-[#2B5142]/70 text-sm mb-3 flex-grow">{tagline}</p>
+        {subtitle && (
+          <p className="text-[#2B5142]/70 text-sm mb-3 flex-grow">{subtitle}</p>
         )}
         <div className="flex items-center justify-between mt-auto">
           {weight && (

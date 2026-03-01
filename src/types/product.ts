@@ -22,6 +22,7 @@ export interface Product {
     base: string;
   };
   ingredientNotes?: Record<string, string>;
+  description?: string;
   ritual?: {
     when: string;
     how: string;
