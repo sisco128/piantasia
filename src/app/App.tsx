@@ -65,7 +65,7 @@ function HomePage() {
               </h2>
               <p className="text-base md:text-lg text-[#2B5142]/80 mb-4 md:mb-6">
                 Piantasia was born from the desire to revisit a gesture: I wanted to transform something automatic into something intentional.
-                To turn a habit into freedom. To keep the pleasure of the ritual, but make it chosen rather than conditioned.
+                To keep the pleasure of the ritual, but make it chosen rather than conditioned.
               </p>
               <p className="text-base md:text-lg text-[#2B5142]/80 mb-4 md:mb-6">
                 That curiosity led me to explore dried plants, textures and aromas, and how different leaves could interact with each other.
