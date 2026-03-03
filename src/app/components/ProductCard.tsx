@@ -8,13 +8,15 @@ interface ProductCardProps {
   descriptor?: string;
   tastingNotes?: string;
   weight: string;
+  portions?: string;
   price: string;
   images: string[];
   badge?: string;
 }
 
-export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weight, price, images, badge }: ProductCardProps) {
+export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weight, portions, price, images, badge }: ProductCardProps) {
   const subtitle = descriptor || tastingNotes || tagline;
+  const weightLine = [weight, portions].filter(Boolean).join(' · ');
   return (
     <Link
       to={`/product/${id}`}
@@ -43,8 +45,8 @@ export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weigh
           <p className="text-[#2B5142]/70 text-sm mb-3 flex-grow">{subtitle}</p>
         )}
         <div className="flex items-center justify-between mt-auto">
-          {weight && (
-            <span className="text-[#2B5142]/60 text-xs font-medium">{weight}</span>
+          {weightLine && (
+            <span className="text-[#2B5142]/70 text-sm font-medium">{weightLine}</span>
           )}
           <span className="text-xl md:text-2xl text-[#2B5142] ml-auto">{price}</span>
         </div>
