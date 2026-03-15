@@ -1,8 +1,26 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+const SECTION_IDS = ['products', 'about', 'contact'] as const;
+
+function scrollToSection(sectionId: string) {
+  const el = document.getElementById(sectionId);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    if (isHome) {
+      e.preventDefault();
+      scrollToSection(sectionId);
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="bg-[#F5F2ED] sticky top-0 z-50 border-b border-[#2B5142]/10">
@@ -20,15 +38,16 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" aria-label="Main navigation">
-            <a href="/#products" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
-              Products
-            </a>
-            <a href="/#about" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
-              About
-            </a>
-            <a href="/#contact" className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded">
-              Contact
-            </a>
+            {SECTION_IDS.map((id) => (
+              <Link
+                key={id}
+                to={`/#${id}`}
+                onClick={(e) => handleNavClick(e, id)}
+                className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded"
+              >
+                {id === 'products' ? 'Products' : id === 'about' ? 'About' : 'Contact'}
+              </Link>
+            ))}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -50,30 +69,17 @@ export function Header() {
           aria-label="Mobile navigation"
         >
           <div className="flex flex-col space-y-4" role="menu">
-            <a 
-              href="/#products" 
-              className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
-              onClick={() => setMobileMenuOpen(false)}
-              role="menuitem"
-            >
-              Products
-            </a>
-            <a 
-              href="/#about" 
-              className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
-              onClick={() => setMobileMenuOpen(false)}
-              role="menuitem"
-            >
-              About
-            </a>
-            <a 
-              href="/#contact" 
-              className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
-              onClick={() => setMobileMenuOpen(false)}
-              role="menuitem"
-            >
-              Contact
-            </a>
+            {SECTION_IDS.map((id) => (
+              <Link
+                key={id}
+                to={`/#${id}`}
+                onClick={(e) => handleNavClick(e, id)}
+                className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
+                role="menuitem"
+              >
+                {id === 'products' ? 'Products' : id === 'about' ? 'About' : 'Contact'}
+              </Link>
+            ))}
           </div>
         </nav>
       </div>

@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from '@/app/components/Header';
 import { Hero } from '@/app/components/Hero';
 import { ProductCard } from '@/app/components/ProductCard';
@@ -9,6 +10,21 @@ import { products } from '@/data/products';
 import { benefits } from '@/data/benefits';
 
 function HomePage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash.slice(1);
+    if (hash && ['products', 'about', 'contact'].includes(hash)) {
+      const el = document.getElementById(hash);
+      if (el) {
+        const t = requestAnimationFrame(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        return () => cancelAnimationFrame(t);
+      }
+    }
+  }, [location.pathname, location.hash]);
+
   return (
     <div className="min-h-screen bg-[#F5F2ED]">
       <Header />
