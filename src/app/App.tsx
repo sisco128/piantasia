@@ -37,7 +37,7 @@ function HomePage() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-12 md:py-16 lg:py-20 bg-white">
+      <section id="products" className="scroll-mt-16 md:scroll-mt-20 py-12 md:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2B5142] mb-3 md:mb-4">A blend for every ritual</h2>
@@ -55,7 +55,7 @@ function HomePage() {
       </section>
 
       {/* About Section — two alternating blocks */}
-      <section id="about" className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-[#8B7BA8]/10 to-[#C67C4F]/10">
+      <section id="about" className="scroll-mt-16 md:scroll-mt-20 py-12 md:py-16 lg:py-20 bg-gradient-to-br from-[#8B7BA8]/10 to-[#C67C4F]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 md:space-y-24">
           {/* Block 1: text left, image right */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
@@ -115,7 +115,7 @@ function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 md:py-20 lg:py-28 bg-[#F5F2ED]">
+      <section id="contact" className="scroll-mt-16 md:scroll-mt-20 py-16 md:py-20 lg:py-28 bg-[#F5F2ED]">
         <div className="max-w-[640px] mx-auto px-6 sm:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#2B5142] mb-4 md:mb-6">
             Get in touch
