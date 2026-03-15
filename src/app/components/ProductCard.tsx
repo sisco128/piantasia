@@ -12,17 +12,17 @@ interface ProductCardProps {
   price: string;
   images: string[];
   badge?: string;
+  externalUrl?: string;
 }
 
-export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weight, portions, price, images, badge }: ProductCardProps) {
+export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weight, portions, price, images, badge, externalUrl }: ProductCardProps) {
   const subtitle = descriptor || tastingNotes || tagline;
   const weightLine = [weight, portions].filter(Boolean).join(' · ');
-  return (
-    <Link
-      to={`/product/${id}`}
-      className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2"
-      aria-label={`${name} — ${subtitle || 'View product'}`}
-    >
+
+  const cardClass = "group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2";
+
+  const content = (
+    <>
       <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden bg-[#F5F2ED]">
         <ImageWithFallback
           src={images[0]}
@@ -51,6 +51,30 @@ export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weigh
           <span className="text-xl md:text-2xl text-[#2B5142] ml-auto">{price}</span>
         </div>
       </div>
+    </>
+  );
+
+  if (externalUrl) {
+    return (
+      <a
+        href={externalUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cardClass}
+        aria-label={`${name} — ${subtitle || 'View product'}`}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link
+      to={`/product/${id}`}
+      className={cardClass}
+      aria-label={`${name} — ${subtitle || 'View product'}`}
+    >
+      {content}
     </Link>
   );
 }
