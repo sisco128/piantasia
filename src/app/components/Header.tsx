@@ -81,8 +81,8 @@ export function Header() {
                   href={`#${id}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(id);
                     setMobileMenuOpen(false);
+                    setTimeout(() => scrollToSection(id), 350);
                   }}
                   className={menuClass}
                   role="menuitem"
