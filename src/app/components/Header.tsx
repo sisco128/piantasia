@@ -2,7 +2,7 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const SECTION_IDS = ['products', 'about', 'contact'] as const;
+const SECTION_IDS = ['products', 'about', 'faq', 'contact'] as const;
 
 function scrollToSection(sectionId: string) {
   const el = document.getElementById(sectionId);
@@ -31,7 +31,14 @@ export function Header() {
           {/* Desktop Navigation — plain <a> on home so only our scroll runs; Link when coming from other pages */}
           <nav className="hidden md:flex items-center space-x-8" aria-label="Main navigation">
             {SECTION_IDS.map((id) => {
-              const label = id === 'products' ? 'Products' : id === 'about' ? 'About' : 'Contact';
+              const label =
+                id === 'products'
+                  ? 'Products'
+                  : id === 'about'
+                    ? 'About'
+                    : id === 'faq'
+                      ? 'FAQ'
+                      : 'Contact';
               const linkClass = 'text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded';
               return isHome ? (
                 <a
@@ -68,12 +75,19 @@ export function Header() {
         {/* Mobile Navigation */}
         <nav 
           id="mobile-menu"
-          className={`md:hidden border-t border-[#2B5142]/10 overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-60 py-4 opacity-100' : 'max-h-0 py-0 opacity-0'}`}
+          className={`md:hidden border-t border-[#2B5142]/10 overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-96 py-4 opacity-100' : 'max-h-0 py-0 opacity-0'}`}
           aria-label="Mobile navigation"
         >
           <div className="flex flex-col space-y-4" role="menu">
             {SECTION_IDS.map((id) => {
-              const label = id === 'products' ? 'Products' : id === 'about' ? 'About' : 'Contact';
+              const label =
+                id === 'products'
+                  ? 'Products'
+                  : id === 'about'
+                    ? 'About'
+                    : id === 'faq'
+                      ? 'FAQ'
+                      : 'Contact';
               const menuClass = 'text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1';
               return isHome ? (
                 <a

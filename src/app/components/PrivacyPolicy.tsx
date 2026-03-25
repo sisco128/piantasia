@@ -27,66 +27,58 @@ export function PrivacyPolicy() {
         </h1>
 
         <p className="font-sans text-sm text-[#2B5142]/75 mb-12">
-          Last updated: February 2026
+          Last updated: March 2026
         </p>
 
         <div className="space-y-10">
           <section>
             <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
-              Overview
+              General information
             </h2>
+            <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed mb-4">
+              This website is operated by Piantasia.
+            </p>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
-              Piantasia ("we", "us", "our") respects your privacy. This policy explains what information we collect, how we use it, and your rights regarding your data. We are committed to minimal data collection and do not use any tracking, analytics, or advertising technologies on our website.
+              We take the protection of your personal data seriously. Personal data is processed in accordance with applicable data protection laws (GDPR).
             </p>
           </section>
 
           <section>
             <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
-              What we collect
+              Data collection
             </h2>
-            <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed mb-4">
-              Our website does not collect any personal data. We do not use cookies, analytics tools, tracking pixels, or any form of user monitoring.
-            </p>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
-              The only moment personal data is processed is when you make a purchase. At that point, you are redirected to Stripe, our payment processor, who handles the transaction securely on their platform.
+              When you place an order, personal data such as name, email address, and shipping information is collected.
             </p>
           </section>
 
           <section>
             <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
-              Payment processing
+              Payments
             </h2>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed mb-4">
-              We use Stripe to process all payments. When you click a purchase link on our product pages, you are taken to a Stripe-hosted checkout page. Stripe collects the information necessary to complete your transaction, including your name, email address, shipping address, and payment details.
+              Payments are processed via Stripe. We do not store any payment details.
             </p>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
-              Stripe processes this data in accordance with their own privacy policy. We receive only the information needed to fulfill your order (name, shipping address, email, and order details). We do not store your payment card information. For more details, see{' '}
+              Please refer to{' '}
               <a
                 href="https://stripe.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#8B7BA8] hover:text-[#2B5142] underline transition-colors"
               >
-                Stripe's Privacy Policy
-              </a>.
+                Stripe&apos;s privacy policy
+              </a>{' '}
+              for more information.
             </p>
           </section>
 
           <section>
             <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
-              How we use your data
+              Contact
             </h2>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
-              The order information we receive from Stripe is used solely to fulfill and ship your order, communicate with you about your purchase, and comply with legal obligations. We do not use your data for marketing purposes unless you explicitly opt in.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
-              Data sharing
-            </h2>
-            <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
-              We do not sell, trade, or share your personal data with third parties, except as necessary to fulfill your order (e.g., shipping carriers) or as required by law.
+              If you contact us via email, your information will be stored for the purpose of processing your request.
             </p>
           </section>
 
@@ -94,25 +86,17 @@ export function PrivacyPolicy() {
             <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
               Your rights
             </h2>
+            <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed mb-4">
+              You have the right to access, correct, or delete your personal data at any time.
+            </p>
             <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
-              Under the General Data Protection Regulation (GDPR), you have the right to access, correct, or delete any personal data we hold about you. You may also request a copy of your data or ask us to restrict its processing. To exercise any of these rights, please contact us via Instagram at{' '}
+              For any privacy-related inquiries, please contact:{' '}
               <a
-                href="https://www.instagram.com/Piantasia.eu/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:annalisa@piantasia.eu"
                 className="text-[#8B7BA8] hover:text-[#2B5142] underline transition-colors"
               >
-                @Piantasia.eu
-              </a>.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-4">
-              Changes to this policy
-            </h2>
-            <p className="font-sans text-base text-[#2B5142]/80 leading-relaxed">
-              We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated revision date.
+                annalisa@piantasia.eu
+              </a>
             </p>
           </section>
         </div>

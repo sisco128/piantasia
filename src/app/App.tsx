@@ -5,7 +5,12 @@ import { Hero } from '@/app/components/Hero';
 import { ProductCard } from '@/app/components/ProductCard';
 import { ProductPage } from '@/app/components/ProductPage';
 import { PrivacyPolicy } from '@/app/components/PrivacyPolicy';
+import { ReturnPolicy } from '@/app/components/ReturnPolicy';
+import { ShippingPolicy } from '@/app/components/ShippingPolicy';
+import { TermsAndConditions } from '@/app/components/TermsAndConditions';
+import { LegalNotice } from '@/app/components/LegalNotice';
 import { Footer } from '@/app/components/Footer';
+import { FaqSection } from '@/app/components/FaqSection';
 import { products } from '@/data/products';
 import { benefits } from '@/data/benefits';
 
@@ -14,7 +19,7 @@ function HomePage() {
 
   useEffect(() => {
     const hash = location.hash.slice(1);
-    if (hash && ['products', 'about', 'contact'].includes(hash)) {
+    if (hash && ['products', 'about', 'faq', 'contact'].includes(hash)) {
       const el = document.getElementById(hash);
       if (el) {
         const t = requestAnimationFrame(() => {
@@ -141,8 +146,10 @@ function HomePage() {
         </div>
       </section>
 
+      <FaqSection />
+
       {/* Contact Section */}
-      <section id="contact" className="scroll-mt-16 md:scroll-mt-20 py-16 md:py-20 lg:py-28 bg-[#F5F2ED]">
+      <section id="contact" className="scroll-mt-16 md:scroll-mt-20 py-16 md:py-20 lg:py-28 bg-white">
         <div className="max-w-[640px] mx-auto px-6 sm:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#2B5142] mb-4 md:mb-6">
             Get in touch
@@ -172,6 +179,10 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/product/:id" element={<ProductPage />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/return-policy" element={<ReturnPolicy />} />
+      <Route path="/shipping-policy" element={<ShippingPolicy />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+      <Route path="/legal-notice" element={<LegalNotice />} />
     </Routes>
   );
 }

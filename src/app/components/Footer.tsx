@@ -47,6 +47,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/#faq" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                  FAQ
+                </a>
+              </li>
+              <li>
                 <a href="/#contact" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Contact
                 </a>
@@ -59,8 +64,28 @@ export function Footer() {
             <h4 className="text-base md:text-lg mb-3 md:mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
+                <Link to="/legal-notice" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                  Legal Notice
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-and-conditions" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                  Terms and Conditions
+                </Link>
+              </li>
+              <li>
                 <Link to="/privacy" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/shipping-policy" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                  Shipping Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/return-policy" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                  Return Policy
                 </Link>
               </li>
             </ul>
