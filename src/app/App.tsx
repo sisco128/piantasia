@@ -4,6 +4,7 @@ import { Header } from '@/app/components/Header';
 import { Hero } from '@/app/components/Hero';
 import { ProductCard } from '@/app/components/ProductCard';
 import { ProductPage } from '@/app/components/ProductPage';
+import { ReviewsCarousel } from '@/app/components/ReviewsCarousel';
 import { PrivacyPolicy } from '@/app/components/PrivacyPolicy';
 import { ReturnPolicy } from '@/app/components/ReturnPolicy';
 import { ShippingPolicy } from '@/app/components/ShippingPolicy';
@@ -56,6 +57,9 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Reviews Section */}
+      <ReviewsCarousel />
 
       {/* Products Section */}
       <section id="products" className="scroll-mt-16 md:scroll-mt-20 py-12 md:py-16 lg:py-20 bg-white">

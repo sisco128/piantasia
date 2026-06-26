@@ -25,3 +25,12 @@ export interface Benefit {
   title: string;
   description: string;
 }
+
+export interface Review {
+  id: string;
+  authorName: string;
+  country?: string;
+  rating: number;
+  title?: string;
+  body: string;
+}
