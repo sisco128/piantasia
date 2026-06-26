@@ -8,7 +8,7 @@ export function ArticlesCarousel() {
   if (!articles.length) return null;
 
   return (
-    <section id="blog" className="scroll-mt-16 md:scroll-mt-20 py-12 md:py-16 lg:py-20 bg-white">
+    <section id="blog" className="scroll-mt-16 md:scroll-mt-20 py-12 md:py-16 lg:py-20 bg-[#F5F2ED]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2B5142] mb-3 md:mb-4">
