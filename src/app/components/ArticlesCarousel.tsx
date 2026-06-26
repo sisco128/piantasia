@@ -37,7 +37,7 @@ export function ArticlesCarousel() {
             to="/blog"
             className="font-sans inline-flex items-center gap-2 text-[#2B5142] hover:text-[#1F3B2F] transition-colors text-sm font-medium underline underline-offset-4"
           >
-            View all articles →
+            View all articles
           </Link>
         </div>
       </div>
