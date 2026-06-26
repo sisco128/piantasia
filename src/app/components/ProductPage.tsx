@@ -201,45 +201,6 @@ export function ProductPage() {
           </div>
         </section>
 
-        {/* S02 — Mood (conditional) */}
-        {product.moodLines && product.moodLines.length > 0 && (
-          <section className="py-20 md:py-28 lg:py-36">
-            <div className="max-w-[640px] mx-auto px-6 sm:px-8 text-center space-y-4">
-              {product.moodLines.map((line, i) => (
-                <p
-                  key={i}
-                  className="font-sans text-lg lg:text-xl italic text-[#2B5142]/70"
-                >
-                  {line}
-                </p>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* S03 — Sensory Pyramid (conditional) */}
-        {product.sensoryPyramid && (
-          <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
-            <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
-              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-10">
-                Sensory Profile
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                {(['top', 'heart', 'base'] as const).map((layer) => (
-                  <div key={layer}>
-                    <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/65 mb-2">
-                      {layer}
-                    </p>
-                    <p className="font-sans text-base text-[#2B5142]">
-                      {product.sensoryPyramid![layer]}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
         {/* S04 — Botanical Composition */}
         {product.ingredients.length > 0 && (
           <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
@@ -256,11 +217,6 @@ export function ProductPage() {
                     <p className="font-sans text-base text-[#2B5142]">
                       {ingredient}
                     </p>
-                    {product.ingredientNotes?.[ingredient] && (
-                      <p className="font-sans text-sm text-[#2B5142]/75 mt-1">
-                        {product.ingredientNotes[ingredient]}
-                      </p>
-                    )}
                   </div>
                 ))}
               </div>
@@ -310,29 +266,6 @@ export function ProductPage() {
             </div>
           </div>
         </section>
-
-        {/* S05 — Ritual (conditional) */}
-        {product.ritual && (
-          <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">
-            <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
-              <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/75 mb-10">
-                Ritual
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                {(['when', 'how', 'time', 'context'] as const).map((field) => (
-                  <div key={field}>
-                    <p className="font-sans text-xs uppercase tracking-widest text-[#2B5142]/65 mb-2">
-                      {field}
-                    </p>
-                    <p className="font-sans text-base text-[#2B5142]">
-                      {product.ritual![field]}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* Sourcing */}
         <section className="py-12 md:py-16 lg:py-20 border-t border-[#2B5142]/10">

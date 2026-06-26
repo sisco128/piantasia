@@ -20,14 +20,6 @@ const absUrl = (url) => (!url ? url : /^https?:\/\//.test(url) ? url : `${BASE}$
 function mapProduct(e) {
   const images = (e.images || []).map((m) => absUrl(m?.url)).filter(Boolean);
 
-  const ingredientNotes = {};
-  for (const n of e.ingredientNotes || []) {
-    if (n?.name) ingredientNotes[n.name] = n.note || '';
-  }
-
-  const sp = e.sensoryPyramid;
-  const r = e.ritual;
-
   // Build with all required Product fields present (defaults for bundles).
   return {
     id: e.slug,
@@ -45,11 +37,7 @@ function mapProduct(e) {
     ...(e.badge ? { badge: e.badge } : {}),
     ...(e.buyUrl ? { buyUrl: e.buyUrl } : {}),
     ...(e.descriptor ? { descriptor: e.descriptor } : {}),
-    ...(Array.isArray(e.moodLines) && e.moodLines.length ? { moodLines: e.moodLines } : {}),
-    ...(sp ? { sensoryPyramid: { top: sp.top || '', heart: sp.heart || '', base: sp.base || '' } } : {}),
-    ...(Object.keys(ingredientNotes).length ? { ingredientNotes } : {}),
     ...(e.description ? { description: e.description } : {}),
-    ...(r ? { ritual: { when: r.when || '', how: r.how || '', time: r.time || '', context: r.context || '' } } : {}),
   };
 }
 

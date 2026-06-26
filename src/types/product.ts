@@ -16,20 +16,7 @@ export interface Product {
   badge?: string;
   buyUrl?: string;
   descriptor?: string;
-  moodLines?: string[];
-  sensoryPyramid?: {
-    top: string;
-    heart: string;
-    base: string;
-  };
-  ingredientNotes?: Record<string, string>;
   description?: string;
-  ritual?: {
-    when: string;
-    how: string;
-    time: string;
-    context: string;
-  };
 }
 
 export interface Benefit {
