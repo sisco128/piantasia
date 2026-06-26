@@ -58,6 +58,12 @@ export function Header() {
                 </Link>
               );
             })}
+            <Link
+              to="/blog"
+              className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded"
+            >
+              Journal
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -115,6 +121,14 @@ export function Header() {
                 </Link>
               );
             })}
+            <Link
+              to="/blog"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] rounded py-1"
+              role="menuitem"
+            >
+              Journal
+            </Link>
           </div>
         </nav>
       </div>

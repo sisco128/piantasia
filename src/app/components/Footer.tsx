@@ -52,6 +52,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <Link to="/blog" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                  Journal
+                </Link>
+              </li>
+              <li>
                 <a href="/#contact" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Contact
                 </a>

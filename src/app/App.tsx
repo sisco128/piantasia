@@ -7,6 +7,7 @@ import { ProductPage } from '@/app/components/ProductPage';
 import { ReviewsCarousel } from '@/app/components/ReviewsCarousel';
 import { ArticlesCarousel } from '@/app/components/ArticlesCarousel';
 import { ArticlePage } from '@/app/components/ArticlePage';
+import { BlogIndexPage } from '@/app/components/BlogIndexPage';
 import { PrivacyPolicy } from '@/app/components/PrivacyPolicy';
 import { ReturnPolicy } from '@/app/components/ReturnPolicy';
 import { ShippingPolicy } from '@/app/components/ShippingPolicy';
@@ -180,6 +181,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/product/:id" element={<ProductPage />} />
+      <Route path="/blog" element={<BlogIndexPage />} />
       <Route path="/blog/:slug" element={<ArticlePage />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/return-policy" element={<ReturnPolicy />} />
