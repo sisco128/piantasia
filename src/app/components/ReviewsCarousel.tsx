@@ -39,7 +39,7 @@ export function ReviewsCarousel() {
           opts={{ loop: true, align: 'start' }}
           plugins={[Autoplay({ delay: 4500, stopOnInteraction: false, stopOnMouseEnter: true })]}
         >
-          <CarouselContent>
+          <CarouselContent className="py-4">
             {reviews.map((review) => {
               const firstName = firstNameOf(review.authorName);
               const { text, truncated } = truncate(review.body);

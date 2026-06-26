@@ -23,7 +23,7 @@ export function ArticlesCarousel() {
           opts={{ loop: articles.length > 1, align: 'start' }}
           plugins={[Autoplay({ delay: 5500, stopOnInteraction: false, stopOnMouseEnter: true })]}
         >
-          <CarouselContent>
+          <CarouselContent className="py-4">
             {articles.map((article) => (
               <CarouselItem key={article.id} className="sm:basis-1/2 lg:basis-1/3">
                 <ArticleCard article={article} />
