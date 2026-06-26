@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 export interface Product {
   id: string;
+  productType: 'blend' | 'bundle';
   name: string;
   tagline: string;
   tastingNotes: string;

@@ -69,19 +69,12 @@ function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {products.map((product) => (
-              <ProductCard key={product.id} {...product} />
+              <ProductCard
+                key={product.id}
+                {...product}
+                externalUrl={product.productType === 'bundle' ? product.buyUrl : undefined}
+              />
             ))}
-            <ProductCard
-              id="bundle"
-              name="Discovery Set"
-              tagline="The complete blend collection in one bundle"
-              descriptor="The complete blend collection in one bundle"
-              weight="33.3 grams"
-              portions="~145 portions"
-              price="€33"
-              images={['/bundle_products.png']}
-              externalUrl="https://buy.stripe.com/3cI8wI7NLewO3WKcEs1gs06"
-            />
           </div>
         </div>
       </section>

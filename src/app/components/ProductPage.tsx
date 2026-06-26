@@ -16,7 +16,8 @@ import {
 
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
-  const product = products.find((p) => p.id === id);
+  // Only blends have detail pages; bundles link straight to checkout.
+  const product = products.find((p) => p.id === id && p.productType === 'blend');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
   const carouselApiRef = useRef<CarouselApi | null>(null);
@@ -55,7 +56,9 @@ export function ProductPage() {
     );
   }
 
-  const otherProducts = products.filter((p) => p.id !== product.id);
+  const otherProducts = products.filter(
+    (p) => p.id !== product.id && p.productType === 'blend'
+  );
 
   return (
     <div className="min-h-screen bg-[#F5F2ED]">
