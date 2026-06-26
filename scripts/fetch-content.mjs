@@ -52,6 +52,21 @@ function mapReview(e) {
   };
 }
 
+function mapArticle(e) {
+  return {
+    id: e.slug,
+    title: e.title,
+    language: e.language || 'en',
+    excerpt: e.excerpt || '',
+    ...(e.cover?.url ? { cover: absUrl(e.cover.url) } : {}),
+    ...(Array.isArray(e.content) ? { content: e.content } : {}),
+    ...(e.author ? { author: e.author } : {}),
+    ...(e.category ? { category: e.category } : {}),
+    ...(Array.isArray(e.tags) ? { tags: e.tags } : {}),
+    ...(e.publishedAt ? { publishedAt: e.publishedAt } : {}),
+  };
+}
+
 async function fetchData(endpoint) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
@@ -109,6 +124,13 @@ async function main() {
     map: mapReview,
     file: 'reviews.generated.json',
     keep: (r) => r.authorName && r.body,
+  });
+  await sync({
+    label: 'articles',
+    endpoint: `${BASE}/api/articles?populate=*&sort=publishedAt:desc&pagination[pageSize]=100`,
+    map: mapArticle,
+    file: 'articles.generated.json',
+    keep: (a) => a.id && a.title,
   });
 }
 

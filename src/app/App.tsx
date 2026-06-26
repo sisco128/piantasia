@@ -5,6 +5,8 @@ import { Hero } from '@/app/components/Hero';
 import { ProductCard } from '@/app/components/ProductCard';
 import { ProductPage } from '@/app/components/ProductPage';
 import { ReviewsCarousel } from '@/app/components/ReviewsCarousel';
+import { ArticlesCarousel } from '@/app/components/ArticlesCarousel';
+import { ArticlePage } from '@/app/components/ArticlePage';
 import { PrivacyPolicy } from '@/app/components/PrivacyPolicy';
 import { ReturnPolicy } from '@/app/components/ReturnPolicy';
 import { ShippingPolicy } from '@/app/components/ShippingPolicy';
@@ -165,6 +167,9 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <ArticlesCarousel />
+
       <Footer />
     </div>
   );
@@ -175,6 +180,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/product/:id" element={<ProductPage />} />
+      <Route path="/blog/:slug" element={<ArticlePage />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/return-policy" element={<ReturnPolicy />} />
       <Route path="/shipping-policy" element={<ShippingPolicy />} />
