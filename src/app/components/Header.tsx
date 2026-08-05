@@ -1,6 +1,8 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, ShoppingBag, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useCart } from '@/app/cart/CartContext';
+import { CartSheet } from './CartSheet';
 
 const SECTION_IDS = ['products', 'about', 'faq', 'contact'] as const;
 
@@ -13,6 +15,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const { count, openCart } = useCart();
 
   return (
     <header className="bg-[#F5F2ED] sticky top-0 z-50 border-b border-[#2B5142]/10">
@@ -66,16 +69,35 @@ export function Header() {
             </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden p-[10px] text-[#2B5142] focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
-          </button>
+          <div className="flex items-center gap-1">
+            {/* Cart */}
+            <button
+              className="relative p-[10px] text-[#2B5142] hover:text-[#8B7BA8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded"
+              onClick={openCart}
+              aria-label={`Open cart${count > 0 ? ` (${count} items)` : ''}`}
+            >
+              <ShoppingBag className="w-6 h-6" aria-hidden="true" />
+              {count > 0 && (
+                <span
+                  className="absolute top-0.5 right-0.5 bg-[#2B5142] text-white text-[10px] font-sans font-medium rounded-full min-w-[18px] h-[18px] flex items-center justify-center px-1"
+                  aria-hidden="true"
+                >
+                  {count}
+                </span>
+              )}
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-[10px] text-[#2B5142] focus:outline-none focus:ring-2 focus:ring-[#8B7BA8] focus:ring-offset-2 rounded"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -132,6 +154,8 @@ export function Header() {
           </div>
         </nav>
       </div>
+
+      <CartSheet />
     </header>
   );
 }

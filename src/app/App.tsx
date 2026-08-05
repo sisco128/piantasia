@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { toast } from 'sonner';
 import { Header } from '@/app/components/Header';
 import { Hero } from '@/app/components/Hero';
 import { ProductCard } from '@/app/components/ProductCard';
 import { ProductPage } from '@/app/components/ProductPage';
+import { CheckoutSuccess } from '@/app/components/CheckoutSuccess';
 import { ReviewsCarousel } from '@/app/components/ReviewsCarousel';
 import { ArticlesCarousel } from '@/app/components/ArticlesCarousel';
 import { ArticlePage } from '@/app/components/ArticlePage';
@@ -22,6 +24,22 @@ function HomePage() {
   const location = useLocation();
 
   useEffect(() => {
+    // Stripe cancel_url lands here; window.location (not router state) so the
+    // replaceState cleanup also guards against StrictMode double-invoke.
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('checkout') === 'cancelled') {
+      toast('Checkout cancelled — your cart is saved.');
+      params.delete('checkout');
+      const query = params.toString();
+      window.history.replaceState(
+        null,
+        '',
+        window.location.pathname + (query ? `?${query}` : '') + window.location.hash
+      );
+    }
+  }, []);
+
+  useEffect(() => {
     const hash = location.hash.slice(1);
     if (hash && ['products', 'about', 'faq', 'contact'].includes(hash)) {
       const el = document.getElementById(hash);
@@ -32,6 +50,7 @@ function HomePage() {
         return () => cancelAnimationFrame(t);
       }
     }
+    return undefined;
   }, [location.pathname, location.hash]);
 
   return (
@@ -76,11 +95,7 @@ function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                {...product}
-                externalUrl={product.productType === 'bundle' ? product.buyUrl : undefined}
-              />
+              <ProductCard key={product.id} {...product} />
             ))}
           </div>
         </div>
@@ -181,6 +196,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/product/:id" element={<ProductPage />} />
+      <Route path="/checkout/success" element={<CheckoutSuccess />} />
       <Route path="/blog" element={<BlogIndexPage />} />
       <Route path="/blog/:slug" element={<ArticlePage />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
