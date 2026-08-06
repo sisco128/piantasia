@@ -35,7 +35,6 @@ function mapProduct(e) {
     price: e.price || '',
     images,
     ...(e.badge ? { badge: e.badge } : {}),
-    ...(e.buyUrl ? { buyUrl: e.buyUrl } : {}),
     ...(e.descriptor ? { descriptor: e.descriptor } : {}),
     ...(e.description ? { description: e.description } : {}),
   };

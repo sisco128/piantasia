@@ -15,7 +15,6 @@ export interface Product {
   price: string;
   images: string[];
   badge?: string;
-  buyUrl?: string;
   descriptor?: string;
   description?: string;
 }

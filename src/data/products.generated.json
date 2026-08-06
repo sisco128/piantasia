@@ -24,7 +24,6 @@
       "/blend_01-3.png",
       "/blend_01-4.png"
     ],
-    "buyUrl": "https://buy.stripe.com/4gM9AMec974m78W47W1gs03",
     "descriptor": "Fresh and uplifting. Designed for daytime rituals.",
     "description": "Blend 01 is built around peppermint and soft leafy textures.\n\nLight and clear in character, with a gentle cooling nuance, it carries a fresh green profile reminiscent of shaded gardens and early mornings.\n\nThe texture is soft and fluffy, offering an even, balanced consistency and a clean aromatic expression."
   },
@@ -54,7 +53,6 @@
       "/blend_02-4.png"
     ],
     "badge": "Bestseller",
-    "buyUrl": "https://buy.stripe.com/14AaEQ7NLfASal86g41gs04",
     "descriptor": "Soft and floral. Designed for slower rituals.",
     "description": "Blend 02 is composed around raspberry leaf and delicate florals.\n\nGentle and rounded in character, it carries a subtle sweetness balanced by aromatic lavender and chamomile.\n\nThe texture is light yet structured, with soft leafy layers and a smooth botanical profile."
   },
@@ -84,7 +82,6 @@
       "/blend_03-4.png"
     ],
     "badge": "New",
-    "buyUrl": "https://buy.stripe.com/00w3coaZX2O650O7k81gs05",
     "descriptor": "Clean and neutral. A versatile botanical base.",
     "description": "Blend 03 is composed as a simple and balanced foundation.\n\nSoft in texture and neutral in aroma, it is designed to highlight the natural character of dried leaves without dominating the blend.\n\nMinimal and unobtrusive, it can be used on its own or as a base to combine with other botanicals."
   },
@@ -103,7 +100,6 @@
     "images": [
       "/bundle_products.png"
     ],
-    "buyUrl": "https://buy.stripe.com/3cI8wI7NLewO3WKcEs1gs06",
     "descriptor": "The complete blend collection in one bundle"
   }
 ]
