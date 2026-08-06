@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { products } from '@/data/products';
+import { useCart } from '@/app/cart/CartContext';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -16,8 +17,8 @@ import {
 
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
-  // Only blends have detail pages; bundles link straight to checkout.
-  const product = products.find((p) => p.id === id && p.productType === 'blend');
+  const product = products.find((p) => p.id === id);
+  const { addItem, openCart } = useCart();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
   const carouselApiRef = useRef<CarouselApi | null>(null);
@@ -35,7 +36,9 @@ export function ProductPage() {
     const onSelect = () => setSelectedIndex(carouselApi.selectedScrollSnap());
     onSelect();
     carouselApi.on('select', onSelect);
-    return () => carouselApi.off('select', onSelect);
+    return () => {
+      carouselApi.off('select', onSelect);
+    };
   }, [carouselApi]);
 
   if (!product) {
@@ -187,16 +190,16 @@ export function ProductPage() {
                 )}
               </div>
 
-              {product.buyUrl && (
-                <a
-                  href={product.buyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-[#2B5142] text-white font-sans text-base font-medium px-10 py-4 rounded-full hover:bg-[#1F3B2F] transition-colors w-full sm:w-auto"
-                >
-                  Add to ritual
-                </a>
-              )}
+              <button
+                type="button"
+                onClick={() => {
+                  addItem(product.id);
+                  openCart();
+                }}
+                className="inline-flex items-center justify-center bg-[#2B5142] text-white font-sans text-base font-medium px-10 py-4 rounded-full hover:bg-[#1F3B2F] transition-colors w-full sm:w-auto"
+              >
+                Add to ritual
+              </button>
             </div>
           </div>
         </section>
@@ -285,23 +288,23 @@ export function ProductPage() {
         </section>
 
         {/* S08 — Secondary CTA */}
-        {product.buyUrl && (
-          <section className="py-20 md:py-28 lg:py-36 border-t border-[#2B5142]/10">
-            <div className="max-w-[640px] mx-auto px-6 sm:px-8 text-center">
-              <p className="font-sans text-base lg:text-lg text-[#2B5142]/60 mb-8">
-                Begin your ritual
-              </p>
-              <a
-                href={product.buyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-[#2B5142] text-white font-sans text-base font-medium px-10 py-4 rounded-full hover:bg-[#1F3B2F] transition-colors"
-              >
-                Add to ritual
-              </a>
-            </div>
-          </section>
-        )}
+        <section className="py-20 md:py-28 lg:py-36 border-t border-[#2B5142]/10">
+          <div className="max-w-[640px] mx-auto px-6 sm:px-8 text-center">
+            <p className="font-sans text-base lg:text-lg text-[#2B5142]/60 mb-8">
+              Begin your ritual
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                addItem(product.id);
+                openCart();
+              }}
+              className="inline-flex items-center justify-center bg-[#2B5142] text-white font-sans text-base font-medium px-10 py-4 rounded-full hover:bg-[#1F3B2F] transition-colors"
+            >
+              Add to ritual
+            </button>
+          </div>
+        </section>
 
         {/* More blends */}
         {otherProducts.length > 0 && (

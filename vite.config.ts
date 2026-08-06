@@ -16,4 +16,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      // Same-origin /api calls in dev, mirroring the vercel.json rewrite.
+      // Set API_PROXY_TARGET=http://localhost:3000 to test a local piantapi.
+      '/api': {
+        target: process.env.API_PROXY_TARGET || 'https://piantapi.vercel.app',
+        changeOrigin: true,
+      },
+    },
+  },
 })

@@ -12,10 +12,9 @@ interface ProductCardProps {
   price: string;
   images: string[];
   badge?: string;
-  externalUrl?: string;
 }
 
-export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weight, portions, price, images, badge, externalUrl }: ProductCardProps) {
+export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weight, portions, price, images, badge }: ProductCardProps) {
   const subtitle = descriptor || tastingNotes || tagline;
   const weightLine = [weight, portions].filter(Boolean).join(' · ');
 
@@ -53,20 +52,6 @@ export function ProductCard({ id, name, tagline, descriptor, tastingNotes, weigh
       </div>
     </>
   );
-
-  if (externalUrl) {
-    return (
-      <a
-        href={externalUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={cardClass}
-        aria-label={`${name} — ${subtitle || 'View product'}`}
-      >
-        {content}
-      </a>
-    );
-  }
 
   return (
     <Link

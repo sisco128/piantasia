@@ -31,3 +31,6 @@ Thumbs.db
 
 # Vite
 .vite
+
+# Claude Code local config
+.claude/

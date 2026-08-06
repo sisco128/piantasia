@@ -1,7 +1,11 @@
 import { useEffect, createElement } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { BlocksRenderer } from '@strapi/blocks-react-renderer';
+import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer';
+import type { ComponentProps } from 'react';
+
+type BlocksComponents = NonNullable<ComponentProps<typeof BlocksRenderer>['blocks']>;
+export type { BlocksContent };
 import { articles } from '@/data/articles';
 import { Header } from './Header';
 import { Footer } from './Footer';
@@ -15,17 +19,17 @@ function formatDate(iso?: string) {
     : d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
-const blockRenderers = {
-  paragraph: ({ children }: { children: React.ReactNode }) => (
+const blockRenderers: BlocksComponents = {
+  paragraph: ({ children }) => (
     <p className="font-sans text-base text-[#2B5142] leading-relaxed mb-5">{children}</p>
   ),
-  heading: ({ children, level }: { children: React.ReactNode; level: number }) =>
+  heading: ({ children, level }) =>
     createElement(
       `h${level}`,
       { className: 'font-heading text-2xl lg:text-3xl text-[#2B5142] mt-8 mb-3' },
       children
     ),
-  link: ({ children, url }: { children: React.ReactNode; url: string }) => (
+  link: ({ children, url }) => (
     <a
       href={url}
       target="_blank"
@@ -35,13 +39,13 @@ const blockRenderers = {
       {children}
     </a>
   ),
-  list: ({ children, format }: { children: React.ReactNode; format: 'ordered' | 'unordered' }) =>
+  list: ({ children, format }) =>
     format === 'ordered' ? (
       <ol className="list-decimal pl-6 mb-5 space-y-1 text-[#2B5142]">{children}</ol>
     ) : (
       <ul className="list-disc pl-6 mb-5 space-y-1 text-[#2B5142]">{children}</ul>
     ),
-  quote: ({ children }: { children: React.ReactNode }) => (
+  quote: ({ children }) => (
     <blockquote className="border-l-2 border-[#8B7BA8] pl-4 italic text-[#2B5142]/80 my-6">
       {children}
     </blockquote>
