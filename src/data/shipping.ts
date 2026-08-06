@@ -2,17 +2,17 @@
  * Display-only mirror of the shipping zones in piantapi/lib/shipping.ts.
  * The backend is authoritative for what is charged; a mismatch here only
  * affects the estimate shown in the cart drawer. Keep the two in sync.
- * PLACEHOLDER rates (€5.00 everywhere) — update together with the backend.
+ * Flat €3.99 for now; zones are ready for per-country rates later.
  */
 
 type ZoneId = 'IT' | 'DE' | 'FR' | 'PL' | 'EU';
 
 const ZONE_RATES_CENTS: Record<ZoneId, number> = {
-  IT: 500,
-  DE: 500,
-  FR: 500,
-  PL: 500,
-  EU: 500,
+  IT: 399,
+  DE: 399,
+  FR: 399,
+  PL: 399,
+  EU: 399,
 };
 
 export interface ShippingCountry {
