@@ -5,6 +5,7 @@ import { toast } from 'sonner';
 import { products } from '@/data/products';
 import { SHIPPING_COUNTRIES, shippingCentsForCountry } from '@/data/shipping';
 import { createCheckoutSession } from '@/lib/api';
+import { trackBeginCheckout } from '@/lib/analytics';
 import { MAX_QUANTITY, useCart } from '@/app/cart/CartContext';
 import { formatCents, parsePriceCents } from '@/app/cart/prices';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -36,6 +37,7 @@ export function CartSheet() {
   const handleCheckout = async () => {
     if (items.length === 0 || isCheckingOut) return;
     setIsCheckingOut(true);
+    trackBeginCheckout(items);
     try {
       const { url } = await createCheckoutSession(
         items.map(({ productId, quantity }) => ({ productId, quantity })),

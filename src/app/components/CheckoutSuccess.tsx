@@ -1,13 +1,15 @@
 import { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useCart } from '@/app/cart/CartContext';
+import { getCheckoutSessionSummary } from '@/lib/api';
+import { trackPurchase } from '@/lib/analytics';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
 export function CheckoutSuccess() {
   const [searchParams] = useSearchParams();
   const { clearCart } = useCart();
-  const hasSession = Boolean(searchParams.get('session_id'));
+  const sessionId = searchParams.get('session_id');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,12 +18,29 @@ export function CheckoutSuccess() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (!sessionId) return;
+    let cancelled = false;
+    getCheckoutSessionSummary(sessionId).then((summary) => {
+      if (cancelled || !summary) return;
+      trackPurchase({
+        transactionId: sessionId,
+        value: summary.amountTotal / 100,
+        currency: summary.currency,
+        items: summary.items,
+      });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [sessionId]);
+
   return (
     <div className="min-h-screen bg-[#F5F2ED]">
       <Header />
       <main className="max-w-[640px] mx-auto px-6 sm:px-8 py-20 md:py-28 text-center">
         <h1 className="font-heading text-4xl lg:text-5xl text-[#2B5142] mb-6">
-          {hasSession ? 'Thank you for your order' : 'Thank you'}
+          {sessionId ? 'Thank you for your order' : 'Thank you'}
         </h1>
         <p className="font-sans text-base md:text-lg text-[#2B5142]/80 mb-4">
           Your ritual is on its way. We&apos;ve received your order and sent a
