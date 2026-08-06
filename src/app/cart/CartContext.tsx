@@ -9,6 +9,7 @@ import {
 } from 'react';
 import { products } from '@/data/products';
 import { DEFAULT_COUNTRY, isShippingCountry } from '@/data/shipping';
+import { trackAddToCart, trackRemoveFromCart, trackViewCart } from '@/lib/analytics';
 import { parsePriceCents } from './prices';
 
 const STORAGE_KEY = 'piantasia-cart-v1';
@@ -138,6 +139,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [state]);
 
+  useEffect(() => {
+    // Runs after commit, so state.items is never stale here — unlike calling
+    // trackViewCart directly from openCart(), which would close over the
+    // cart as it was before a same-click addItem's dispatch had applied.
+    if (isOpen) trackViewCart(state.items);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
+
   const value = useMemo<CartContextValue>(() => {
     const count = state.items.reduce((sum, i) => sum + i.quantity, 0);
     const subtotalCents = state.items.reduce((sum, i) => {
@@ -149,10 +158,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
       country: state.country,
       count,
       subtotalCents,
-      addItem: (productId, quantity) => dispatch({ type: 'ADD_ITEM', productId, quantity }),
-      removeItem: (productId) => dispatch({ type: 'REMOVE_ITEM', productId }),
-      setQuantity: (productId, quantity) =>
-        dispatch({ type: 'SET_QUANTITY', productId, quantity }),
+      addItem: (productId, quantity) => {
+        dispatch({ type: 'ADD_ITEM', productId, quantity });
+        trackAddToCart(productId, quantity ?? 1);
+      },
+      removeItem: (productId) => {
+        const existing = state.items.find((i) => i.productId === productId);
+        dispatch({ type: 'REMOVE_ITEM', productId });
+        if (existing) trackRemoveFromCart(productId, existing.quantity);
+      },
+      setQuantity: (productId, quantity) => {
+        const existing = state.items.find((i) => i.productId === productId);
+        dispatch({ type: 'SET_QUANTITY', productId, quantity });
+        if (!existing) return;
+        const delta = clampQuantity(quantity) - existing.quantity;
+        if (delta > 0) trackAddToCart(productId, delta);
+        else if (delta < 0) trackRemoveFromCart(productId, -delta);
+      },
       setCountry: (country) => dispatch({ type: 'SET_COUNTRY', country }),
       clearCart: () => dispatch({ type: 'CLEAR' }),
       isOpen,

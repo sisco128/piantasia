@@ -55,3 +55,30 @@ export async function createCheckoutSession(
   }
   return { url: data.url, orderId: data.orderId };
 }
+
+interface CheckoutSessionSummary {
+  orderId: string | null;
+  amountTotal: number;
+  currency: string;
+  items: Array<{ name: string; quantity: number }>;
+}
+
+/** Order summary for the success page's purchase analytics event. */
+export async function getCheckoutSessionSummary(
+  sessionId: string
+): Promise<CheckoutSessionSummary | null> {
+  try {
+    const response = await fetch(`/api/checkout?session_id=${encodeURIComponent(sessionId)}`);
+    if (!response.ok) return null;
+    const data = (await response.json()) as Partial<CheckoutSessionSummary> | null;
+    if (!data || typeof data.amountTotal !== 'number' || !Array.isArray(data.items)) return null;
+    return {
+      orderId: data.orderId ?? null,
+      amountTotal: data.amountTotal,
+      currency: data.currency ?? 'eur',
+      items: data.items,
+    };
+  } catch {
+    return null;
+  }
+}
