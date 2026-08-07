@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 export function LegalNotice() {
+  useDocumentTitle('Legal Notice | Piantasia');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

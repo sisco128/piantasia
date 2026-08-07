@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 const policyLinkClass =
   'text-[#8B7BA8] hover:text-[#2B5142] underline transition-colors';
 
 export function TermsAndConditions() {
+  useDocumentTitle('Terms and Conditions | Piantasia');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

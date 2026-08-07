@@ -18,10 +18,13 @@ import { LegalNotice } from '@/app/components/LegalNotice';
 import { Footer } from '@/app/components/Footer';
 import { FaqSection } from '@/app/components/FaqSection';
 import { products } from '@/data/products';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 import { benefits } from '@/data/benefits';
 
 function HomePage() {
   const location = useLocation();
+
+  useDocumentTitle('Piantasia | Tobacco-Free Herbal Blends — Rethink the gesture');
 
   useEffect(() => {
     // Stripe cancel_url lands here; window.location (not router state) so the
