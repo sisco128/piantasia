@@ -56,6 +56,22 @@ export async function createCheckoutSession(
   return { url: data.url, orderId: data.orderId };
 }
 
+/**
+ * The visitor's country from the backend's IP geolocation, used to preselect
+ * a shipping country. Returns null on any failure — the caller keeps its own
+ * default rather than surfacing an error.
+ */
+export async function fetchGeoCountry(): Promise<string | null> {
+  try {
+    const response = await fetch('/api/geo');
+    if (!response.ok) return null;
+    const data = (await response.json()) as { country?: unknown } | null;
+    return typeof data?.country === 'string' ? data.country : null;
+  } catch {
+    return null;
+  }
+}
+
 interface CheckoutSessionSummary {
   orderId: string | null;
   amountTotal: number;

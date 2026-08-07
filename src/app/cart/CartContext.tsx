@@ -10,6 +10,7 @@ import {
 import { products } from '@/data/products';
 import { DEFAULT_COUNTRY, isShippingCountry } from '@/data/shipping';
 import { trackAddToCart, trackRemoveFromCart, trackViewCart } from '@/lib/analytics';
+import { fetchGeoCountry } from '@/lib/api';
 import { parsePriceCents } from './prices';
 
 const STORAGE_KEY = 'piantasia-cart-v1';
@@ -24,6 +25,11 @@ export interface CartItem {
 interface CartState {
   items: CartItem[];
   country: string;
+  /**
+   * The country came from a saved cart or an explicit pick, so IP detection
+   * must leave it alone. Derived on load, never persisted.
+   */
+  countryExplicit: boolean;
 }
 
 type CartAction =
@@ -31,6 +37,7 @@ type CartAction =
   | { type: 'REMOVE_ITEM'; productId: string }
   | { type: 'SET_QUANTITY'; productId: string; quantity: number }
   | { type: 'SET_COUNTRY'; country: string }
+  | { type: 'SET_DETECTED_COUNTRY'; country: string }
   | { type: 'CLEAR' };
 
 function clampQuantity(quantity: number): number {
@@ -66,7 +73,15 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       };
     }
     case 'SET_COUNTRY':
-      return isShippingCountry(action.country) ? { ...state, country: action.country } : state;
+      return isShippingCountry(action.country)
+        ? { ...state, country: action.country, countryExplicit: true }
+        : state;
+    case 'SET_DETECTED_COUNTRY':
+      // Only fills a gap: never overrides a customer's own pick, and never
+      // selects a country we don't ship to.
+      return !state.countryExplicit && isShippingCountry(action.country)
+        ? { ...state, country: action.country }
+        : state;
     case 'CLEAR':
       return { ...state, items: [] };
     default:
@@ -75,7 +90,11 @@ function cartReducer(state: CartState, action: CartAction): CartState {
 }
 
 function loadInitialState(): CartState {
-  const fallback: CartState = { items: [], country: DEFAULT_COUNTRY };
+  const fallback: CartState = {
+    items: [],
+    country: DEFAULT_COUNTRY,
+    countryExplicit: false,
+  };
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return fallback;
@@ -97,11 +116,17 @@ function loadInitialState(): CartState {
         items.push({ productId, quantity: clamped });
       }
     }
-    const country =
+    // A country restored from storage is a pick the customer already made.
+    // One that is no longer served counts as no pick, so detection can fill it.
+    const savedCountry =
       typeof parsed.country === 'string' && isShippingCountry(parsed.country)
         ? parsed.country
-        : DEFAULT_COUNTRY;
-    return { items, country };
+        : null;
+    return {
+      items,
+      country: savedCountry ?? DEFAULT_COUNTRY,
+      countryExplicit: savedCountry !== null,
+    };
   } catch {
     return fallback;
   }
@@ -138,6 +163,19 @@ export function CartProvider({ children }: { children: ReactNode }) {
       // Storage unavailable (private mode, quota) — cart still works in-memory.
     }
   }, [state]);
+
+  useEffect(() => {
+    // Fires at app mount rather than when the drawer opens, so the answer is
+    // already in by the time the customer looks at the cart. The reducer drops
+    // it if they have meanwhile picked a country themselves.
+    let cancelled = false;
+    fetchGeoCountry().then((country) => {
+      if (!cancelled && country) dispatch({ type: 'SET_DETECTED_COUNTRY', country });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     // Runs after commit, so state.items is never stale here — unlike calling
