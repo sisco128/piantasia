@@ -1,5 +1,6 @@
 import { Instagram, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { openCookiePreferences } from '@/lib/consent';
 
 export function Footer() {
   return (
@@ -92,6 +93,20 @@ export function Footer() {
                 <Link to="/return-policy" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
                   Return Policy
                 </Link>
+              </li>
+              <li>
+                <Link to="/cookie-policy" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={openCookiePreferences}
+                  className="text-white/80 hover:text-white transition-colors text-sm md:text-base text-left"
+                >
+                  Cookie settings
+                </button>
               </li>
             </ul>
           </div>

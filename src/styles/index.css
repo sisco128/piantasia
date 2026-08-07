@@ -1,2 +1,4 @@
 @import './tailwind.css';
 @import './theme.css';
+@import 'vanilla-cookieconsent/dist/cookieconsent.css';
+@import './cookieconsent.css';
