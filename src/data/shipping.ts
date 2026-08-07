@@ -1,63 +1,50 @@
 /**
- * Display-only mirror of the shipping zones in piantapi/lib/shipping.ts.
+ * Display-only mirror of the shipping rates in piantapi/lib/shipping.ts.
  * The backend is authoritative for what is charged; a mismatch here only
  * affects the estimate shown in the cart drawer. Keep the two in sync.
- * Flat €3.99 for now; zones are ready for per-country rates later.
+ *
+ * Germany then Italy first (main markets), the rest alphabetical.
  */
-
-type ZoneId = 'IT' | 'DE' | 'FR' | 'PL' | 'EU';
-
-const ZONE_RATES_CENTS: Record<ZoneId, number> = {
-  IT: 399,
-  DE: 399,
-  FR: 399,
-  PL: 399,
-  EU: 399,
-};
 
 export interface ShippingCountry {
   code: string;
   label: string;
-  zone: ZoneId;
+  amountCents: number;
 }
 
 export const SHIPPING_COUNTRIES: ShippingCountry[] = [
-  { code: 'IT', label: 'Italy', zone: 'IT' },
-  { code: 'DE', label: 'Germany', zone: 'DE' },
-  { code: 'FR', label: 'France', zone: 'FR' },
-  { code: 'PL', label: 'Poland', zone: 'PL' },
-  { code: 'AT', label: 'Austria', zone: 'EU' },
-  { code: 'BE', label: 'Belgium', zone: 'EU' },
-  { code: 'BG', label: 'Bulgaria', zone: 'EU' },
-  { code: 'HR', label: 'Croatia', zone: 'EU' },
-  { code: 'CY', label: 'Cyprus', zone: 'EU' },
-  { code: 'CZ', label: 'Czechia', zone: 'EU' },
-  { code: 'DK', label: 'Denmark', zone: 'EU' },
-  { code: 'EE', label: 'Estonia', zone: 'EU' },
-  { code: 'FI', label: 'Finland', zone: 'EU' },
-  { code: 'GR', label: 'Greece', zone: 'EU' },
-  { code: 'HU', label: 'Hungary', zone: 'EU' },
-  { code: 'IE', label: 'Ireland', zone: 'EU' },
-  { code: 'LV', label: 'Latvia', zone: 'EU' },
-  { code: 'LT', label: 'Lithuania', zone: 'EU' },
-  { code: 'LU', label: 'Luxembourg', zone: 'EU' },
-  { code: 'MT', label: 'Malta', zone: 'EU' },
-  { code: 'NL', label: 'Netherlands', zone: 'EU' },
-  { code: 'PT', label: 'Portugal', zone: 'EU' },
-  { code: 'RO', label: 'Romania', zone: 'EU' },
-  { code: 'SK', label: 'Slovakia', zone: 'EU' },
-  { code: 'SI', label: 'Slovenia', zone: 'EU' },
-  { code: 'ES', label: 'Spain', zone: 'EU' },
-  { code: 'SE', label: 'Sweden', zone: 'EU' },
+  { code: 'DE', label: 'Germany', amountCents: 499 },
+  { code: 'IT', label: 'Italy', amountCents: 699 },
+  { code: 'AT', label: 'Austria', amountCents: 599 },
+  { code: 'BE', label: 'Belgium', amountCents: 599 },
+  { code: 'HR', label: 'Croatia', amountCents: 699 },
+  { code: 'CZ', label: 'Czechia', amountCents: 599 },
+  { code: 'DK', label: 'Denmark', amountCents: 699 },
+  { code: 'FI', label: 'Finland', amountCents: 899 },
+  { code: 'FR', label: 'France', amountCents: 599 },
+  { code: 'GR', label: 'Greece', amountCents: 899 },
+  { code: 'HU', label: 'Hungary', amountCents: 699 },
+  { code: 'IE', label: 'Ireland', amountCents: 899 },
+  { code: 'NL', label: 'Netherlands', amountCents: 599 },
+  { code: 'PL', label: 'Poland', amountCents: 599 },
+  { code: 'PT', label: 'Portugal', amountCents: 899 },
+  { code: 'RO', label: 'Romania', amountCents: 899 },
+  { code: 'SK', label: 'Slovakia', amountCents: 699 },
+  { code: 'SI', label: 'Slovenia', amountCents: 699 },
+  { code: 'ES', label: 'Spain', amountCents: 699 },
+  { code: 'SE', label: 'Sweden', amountCents: 699 },
 ];
 
-export const DEFAULT_COUNTRY = 'IT';
+/** Preselected in the cart, and the fallback for an unknown/stale country. */
+export const DEFAULT_COUNTRY = 'DE';
 
 export function isShippingCountry(code: string): boolean {
   return SHIPPING_COUNTRIES.some((c) => c.code === code);
 }
 
 export function shippingCentsForCountry(code: string): number {
-  const country = SHIPPING_COUNTRIES.find((c) => c.code === code);
-  return country ? ZONE_RATES_CENTS[country.zone] : ZONE_RATES_CENTS.EU;
+  const country =
+    SHIPPING_COUNTRIES.find((c) => c.code === code) ??
+    SHIPPING_COUNTRIES.find((c) => c.code === DEFAULT_COUNTRY);
+  return country?.amountCents ?? 0;
 }
