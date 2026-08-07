@@ -35,7 +35,8 @@ export const SHIPPING_COUNTRIES: ShippingCountry[] = [
   { code: 'SE', label: 'Sweden', amountCents: 699 },
 ];
 
-export const DEFAULT_COUNTRY = 'IT';
+/** Preselected in the cart, and the fallback for an unknown/stale country. */
+export const DEFAULT_COUNTRY = 'DE';
 
 export function isShippingCountry(code: string): boolean {
   return SHIPPING_COUNTRIES.some((c) => c.code === code);
