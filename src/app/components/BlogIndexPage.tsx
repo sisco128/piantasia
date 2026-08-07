@@ -5,8 +5,11 @@ import { articles } from '@/data/articles';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ArticleCard } from './ArticleCard';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 export function BlogIndexPage() {
+  useDocumentTitle('Journal — Rituals, Botanicals and Harm Reduction | Piantasia');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

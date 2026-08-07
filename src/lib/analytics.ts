@@ -55,6 +55,32 @@ function pushEcommerceEvent(event: string, ecommerce: Record<string, unknown>): 
   window.dataLayer.push({ event, ecommerce });
 }
 
+/**
+ * Sent by useDocumentTitle after the title is updated. GA4's own SPA page
+ * views are switched off (they would report the previous page's title), so
+ * this is the only source of page_view — including the first page load.
+ */
+export function trackPageView(pageTitle: string): void {
+  if (typeof window === 'undefined') return;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'page_view',
+    page_title: pageTitle,
+    page_location: window.location.href,
+    page_path: window.location.pathname + window.location.search,
+  });
+}
+
+export function trackViewItem(productId: string): void {
+  const item = itemFor(productId, 1);
+  if (!item) return;
+  pushEcommerceEvent('view_item', {
+    currency: 'EUR',
+    value: item.price,
+    items: [item],
+  });
+}
+
 export function trackAddToCart(productId: string, quantity: number): void {
   const item = itemFor(productId, quantity);
   if (!item) return;
@@ -95,34 +121,33 @@ export function trackBeginCheckout(items: CartItem[]): void {
   });
 }
 
-const PURCHASE_TRACKED_KEY = 'piantasia-purchase-tracked';
-
 /**
- * Fires at most once per transaction id (guards against the success page
- * being refreshed or StrictMode's effect double-invoke in dev causing a
- * duplicate purchase event).
+ * The GA4 identifiers for this browser, read from the cookies the Google tag
+ * sets. They travel with the checkout so the webhook can attribute its
+ * server-side `purchase` to the same user and session — otherwise every sale
+ * would look like it came out of nowhere.
+ *
+ * `purchase` is deliberately *not* sent from the browser: the customer often
+ * never comes back from Stripe, and sales made through Payment Links never
+ * touch the site at all. The webhook is the only place that sees them all.
  */
-export function trackPurchase(opts: {
-  transactionId: string;
-  value: number;
-  currency: string;
-  items: Array<{ name: string; quantity: number }>;
-}): void {
-  try {
-    const raw = sessionStorage.getItem(PURCHASE_TRACKED_KEY);
-    const tracked: string[] = raw ? JSON.parse(raw) : [];
-    if (tracked.includes(opts.transactionId)) return;
-    sessionStorage.setItem(
-      PURCHASE_TRACKED_KEY,
-      JSON.stringify([...tracked, opts.transactionId].slice(-10))
-    );
-  } catch {
-    // sessionStorage unavailable — fire anyway rather than silently dropping the event.
-  }
-  pushEcommerceEvent('purchase', {
-    transaction_id: opts.transactionId,
-    value: opts.value,
-    currency: opts.currency.toUpperCase(),
-    items: opts.items.map((i) => ({ item_name: i.name, quantity: i.quantity })),
-  });
+export function getGaIdentifiers(): { clientId: string | null; sessionId: string | null } {
+  const read = (name: string): string | null => {
+    try {
+      const match = document.cookie.match(new RegExp(`(?:^|;\\s*)${name}=([^;]+)`));
+      return match?.[1] ?? null;
+    } catch {
+      return null;
+    }
+  };
+
+  // _ga looks like "GA1.1.1234567890.1234567890"; the client id is the last two parts.
+  const ga = read('_ga');
+  const clientId = ga ? (ga.split('.').slice(-2).join('.') || null) : null;
+
+  // _ga_<measurement id without the "G-"> looks like "GS1.1.<session id>.<n>...."
+  const gaSession = read('_ga_TVBY8TXE8J');
+  const sessionId = gaSession ? (gaSession.split('.')[2] ?? null) : null;
+
+  return { clientId, sessionId };
 }

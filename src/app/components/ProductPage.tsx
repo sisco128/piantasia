@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { products } from '@/data/products';
 import { useCart } from '@/app/cart/CartContext';
+import { trackViewItem } from '@/lib/analytics';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -19,6 +21,12 @@ export function ProductPage() {
   const { id } = useParams<{ id: string }>();
   const product = products.find((p) => p.id === id);
   const { addItem, openCart } = useCart();
+
+  useDocumentTitle(
+    product
+      ? `${product.name} — Tobacco-Free Herbal Blend | Piantasia`
+      : 'Product not found | Piantasia'
+  );
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
   const carouselApiRef = useRef<CarouselApi | null>(null);
@@ -29,6 +37,10 @@ export function ProductPage() {
 
   useEffect(() => {
     if (product?.id) setSelectedIndex(0);
+  }, [product?.id]);
+
+  useEffect(() => {
+    if (product?.id) trackViewItem(product.id);
   }, [product?.id]);
 
   useEffect(() => {

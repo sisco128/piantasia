@@ -10,6 +10,7 @@ import { articles } from '@/data/articles';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 function formatDate(iso?: string) {
   if (!iso) return '';
@@ -55,6 +56,8 @@ const blockRenderers: BlocksComponents = {
 export function ArticlePage() {
   const { slug } = useParams<{ slug: string }>();
   const article = articles.find((a) => a.id === slug);
+
+  useDocumentTitle(article ? `${article.title} | Piantasia` : 'Article not found | Piantasia');
 
   useEffect(() => {
     window.scrollTo(0, 0);

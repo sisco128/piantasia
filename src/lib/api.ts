@@ -3,6 +3,7 @@
  * proxied to the backend by vercel.json in production and the Vite dev
  * proxy locally, so no CORS is involved.
  */
+import { getGaIdentifiers } from './analytics';
 
 export class CheckoutError extends Error {
   readonly code: string;
@@ -23,12 +24,16 @@ export async function createCheckoutSession(
   items: Array<{ productId: string; quantity: number }>,
   country: string
 ): Promise<CheckoutResponse> {
+  // Carried through Stripe so the webhook's server-side purchase event lands
+  // on the right GA4 user and session instead of looking like direct traffic.
+  const { clientId, sessionId } = getGaIdentifiers();
+
   let response: Response;
   try {
     response = await fetch('/api/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ items, country }),
+      body: JSON.stringify({ items, country, gaClientId: clientId, gaSessionId: sessionId }),
     });
   } catch {
     throw new CheckoutError('network', 'Could not reach the checkout service');
@@ -72,29 +77,3 @@ export async function fetchGeoCountry(): Promise<string | null> {
   }
 }
 
-interface CheckoutSessionSummary {
-  orderId: string | null;
-  amountTotal: number;
-  currency: string;
-  items: Array<{ name: string; quantity: number }>;
-}
-
-/** Order summary for the success page's purchase analytics event. */
-export async function getCheckoutSessionSummary(
-  sessionId: string
-): Promise<CheckoutSessionSummary | null> {
-  try {
-    const response = await fetch(`/api/checkout?session_id=${encodeURIComponent(sessionId)}`);
-    if (!response.ok) return null;
-    const data = (await response.json()) as Partial<CheckoutSessionSummary> | null;
-    if (!data || typeof data.amountTotal !== 'number' || !Array.isArray(data.items)) return null;
-    return {
-      orderId: data.orderId ?? null,
-      amountTotal: data.amountTotal,
-      currency: data.currency ?? 'eur',
-      items: data.items,
-    };
-  } catch {
-    return null;
-  }
-}
