@@ -3,7 +3,7 @@
  * The backend is authoritative for what is charged; a mismatch here only
  * affects the estimate shown in the cart drawer. Keep the two in sync.
  *
- * Italy first (default and home market), then alphabetical.
+ * Germany then Italy first (main markets), the rest alphabetical.
  */
 
 export interface ShippingCountry {
@@ -13,6 +13,7 @@ export interface ShippingCountry {
 }
 
 export const SHIPPING_COUNTRIES: ShippingCountry[] = [
+  { code: 'DE', label: 'Germany', amountCents: 499 },
   { code: 'IT', label: 'Italy', amountCents: 699 },
   { code: 'AT', label: 'Austria', amountCents: 599 },
   { code: 'BE', label: 'Belgium', amountCents: 599 },
@@ -21,7 +22,6 @@ export const SHIPPING_COUNTRIES: ShippingCountry[] = [
   { code: 'DK', label: 'Denmark', amountCents: 699 },
   { code: 'FI', label: 'Finland', amountCents: 899 },
   { code: 'FR', label: 'France', amountCents: 599 },
-  { code: 'DE', label: 'Germany', amountCents: 499 },
   { code: 'GR', label: 'Greece', amountCents: 899 },
   { code: 'HU', label: 'Hungary', amountCents: 699 },
   { code: 'IE', label: 'Ireland', amountCents: 899 },
