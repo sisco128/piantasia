@@ -7,14 +7,17 @@
  * redirected to Stripe Checkout — and Cloudinary sets no cookies.
  *
  * The `denied` default is set in index.html, before GTM loads. This module
- * only ever sends the `update`, on first choice and on every later page load
- * (vanilla-cookieconsent calls onConsent both times).
+ * sends the `update`, on first choice and on every later page load
+ * (vanilla-cookieconsent calls onConsent both times), and replays the page
+ * view that the accepted-on page would otherwise never report — see
+ * replayPageView.
  *
  * `window.gtag` only exists on the live site, where the GTM snippet defines
  * it. The banner itself runs everywhere so it can be reviewed in development
  * and on preview deploys; without GTM there is simply nothing to gate.
  */
 import * as CookieConsent from 'vanilla-cookieconsent';
+import { trackPageView } from './analytics';
 
 declare global {
   interface Window {
@@ -25,6 +28,33 @@ declare global {
 const ANALYTICS = 'analytics';
 
 /**
+ * True once the visitor has actually clicked something, as opposed to the
+ * onConsent that also fires on every page load for an existing choice.
+ */
+let userChose = false;
+
+/** The page whose view has already been replayed, so it happens once each. */
+let replayedFor: string | null = null;
+
+/**
+ * The GA4 tags in GTM require analytics_storage before they will fire, and the
+ * Google tag hangs off the initialisation trigger — long past by the time
+ * anyone clicks Accept. So the page the visitor accepted on produced no
+ * page_view at all, and that is the one page whose view matters most: it
+ * carries the acquisition source. Replaying it here recovers that.
+ *
+ * Only after a real click, and only once per page: the onConsent that fires on
+ * an ordinary page load must not double-count what useDocumentTitle already
+ * sent.
+ */
+function replayPageView(): void {
+  if (!userChose || replayedFor === window.location.href) return;
+  if (!CookieConsent.acceptedCategory(ANALYTICS)) return;
+  replayedFor = window.location.href;
+  trackPageView(document.title);
+}
+
+/**
  * Mirrors the current choice into Consent Mode and onto the dataLayer, so a
  * GTM trigger can react to a change without waiting for the next page load.
  */
@@ -33,6 +63,8 @@ function syncConsentMode(): void {
   window.gtag?.('consent', 'update', { analytics_storage: value });
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event: 'cookie_consent_update', analytics_consent: value });
+  // After the update, never before it, or the tags would still be blocked.
+  replayPageView();
 }
 
 let initialised = false;
@@ -62,9 +94,17 @@ export function initCookieConsent(): void {
     },
 
     // onConsent covers both the first choice and every later page load;
-    // adding onFirstConsent as well would push the event twice.
+    // adding onFirstConsent as well would push the consent event twice, so it
+    // only records that a human was involved. It runs before onConsent, which
+    // is what makes the flag readable by the time the update goes out.
+    onFirstConsent: () => {
+      userChose = true;
+    },
     onConsent: syncConsentMode,
-    onChange: syncConsentMode,
+    onChange: () => {
+      userChose = true;
+      syncConsentMode();
+    },
 
     language: {
       default: 'en',
