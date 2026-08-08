@@ -4,6 +4,24 @@
     <!-- Google Tag Manager — live site only, so Vercel preview deploys and
          local development never reach the production Analytics property. -->
     <script>if (location.hostname === 'piantasia.eu' || location.hostname === 'www.piantasia.eu') {
+    // Google Consent Mode v2. The default has to be in place *before* GTM
+    // loads, or GA4 fires before the visitor has had any say. Denied
+    // everywhere rather than by region: we only sell inside the EU, so the
+    // geo split would add complexity for no benefit. The cookie banner
+    // (src/lib/consent.ts) sends the matching 'update' once they choose;
+    // wait_for_update gives it a moment to arrive on a returning visit.
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=

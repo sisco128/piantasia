@@ -11,6 +11,7 @@ import { ArticlesCarousel } from '@/app/components/ArticlesCarousel';
 import { ArticlePage } from '@/app/components/ArticlePage';
 import { BlogIndexPage } from '@/app/components/BlogIndexPage';
 import { PrivacyPolicy } from '@/app/components/PrivacyPolicy';
+import { CookiePolicy } from '@/app/components/CookiePolicy';
 import { ReturnPolicy } from '@/app/components/ReturnPolicy';
 import { ShippingPolicy } from '@/app/components/ShippingPolicy';
 import { TermsAndConditions } from '@/app/components/TermsAndConditions';
@@ -203,6 +204,7 @@ export default function App() {
       <Route path="/blog" element={<BlogIndexPage />} />
       <Route path="/blog/:slug" element={<ArticlePage />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/cookie-policy" element={<CookiePolicy />} />
       <Route path="/return-policy" element={<ReturnPolicy />} />
       <Route path="/shipping-policy" element={<ShippingPolicy />} />
       <Route path="/terms-and-conditions" element={<TermsAndConditions />} />

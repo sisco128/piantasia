@@ -1,0 +1,108 @@
+/**
+ * Brand theme for vanilla-cookieconsent. The plugin resets every element it
+ * renders (`all: unset`), so nothing leaks in from the site's base styles —
+ * the look comes entirely from the variables below.
+ */
+
+#cc-main {
+  --cc-font-family: 'Zen Kaku Gothic New', sans-serif;
+  /* White on the cream page, like the site's cards. */
+  --cc-bg: #ffffff;
+  --cc-primary-color: #2b5142;
+  --cc-secondary-color: rgba(43, 81, 66, 0.75);
+
+  --cc-modal-border-radius: 1rem;
+  /* Not just the buttons: the plugin reuses this for the category blocks too,
+     so a pill value here turns them into ellipses. The buttons get their
+     rounded-full shape from an explicit rule further down. */
+  --cc-btn-border-radius: 0.75rem;
+  --cc-pm-toggle-border-radius: 9999px;
+
+  --cc-btn-primary-bg: #2b5142;
+  --cc-btn-primary-color: #ffffff;
+  --cc-btn-primary-border-color: #2b5142;
+  --cc-btn-primary-hover-bg: #1f3b2f;
+  --cc-btn-primary-hover-color: #ffffff;
+  --cc-btn-primary-hover-border-color: #1f3b2f;
+
+  /* Reject reads as clearly as Accept — same size, same weight, outlined. */
+  --cc-btn-secondary-bg: transparent;
+  --cc-btn-secondary-color: #2b5142;
+  --cc-btn-secondary-border-color: rgba(43, 81, 66, 0.35);
+  --cc-btn-secondary-hover-bg: rgba(43, 81, 66, 0.08);
+  --cc-btn-secondary-hover-color: #2b5142;
+  --cc-btn-secondary-hover-border-color: #2b5142;
+
+  --cc-link-color: #8b7ba8;
+  --cc-separator-border-color: rgba(43, 81, 66, 0.15);
+  --cc-section-category-border: rgba(43, 81, 66, 0.12);
+
+  --cc-toggle-on-bg: #2b5142;
+  --cc-toggle-off-bg: rgba(43, 81, 66, 0.3);
+  --cc-toggle-on-knob-bg: #ffffff;
+  --cc-toggle-off-knob-bg: #ffffff;
+  --cc-toggle-enabled-icon-color: #2b5142;
+  --cc-toggle-disabled-icon-color: rgba(43, 81, 66, 0.6);
+  /* Locked on, so it should read as on — just muted, not like an off switch. */
+  --cc-toggle-readonly-bg: rgba(43, 81, 66, 0.55);
+  --cc-toggle-readonly-knob-bg: #ffffff;
+  --cc-toggle-readonly-knob-icon-color: rgba(43, 81, 66, 0.6);
+
+  --cc-cookie-category-block-bg: #f5f2ed;
+  --cc-cookie-category-block-border: rgba(43, 81, 66, 0.12);
+  --cc-cookie-category-block-hover-bg: #efeae1;
+  --cc-cookie-category-block-hover-border: rgba(43, 81, 66, 0.25);
+  --cc-cookie-category-expanded-block-bg: transparent;
+  --cc-cookie-category-expanded-block-hover-bg: rgba(43, 81, 66, 0.06);
+
+  --cc-overlay-bg: rgba(43, 81, 66, 0.55);
+  --cc-footer-bg: #f5f2ed;
+  --cc-footer-color: rgba(43, 81, 66, 0.75);
+  --cc-footer-border-color: rgba(43, 81, 66, 0.12);
+
+  --cc-webkit-scrollbar-bg: rgba(43, 81, 66, 0.25);
+  --cc-webkit-scrollbar-hover-bg: rgba(43, 81, 66, 0.45);
+}
+
+/* Titles use the display face, as everywhere else on the site. */
+#cc-main .cm__title,
+#cc-main .pm__title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Pill buttons, like the site's calls to action. */
+#cc-main .cm__btn,
+#cc-main .pm__btn,
+#cc-main .pm__close-btn {
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+/* The corner "x" also rejects; keep it quiet so it doesn't read as the
+   primary action sitting on top of the title. */
+#cc-main .cm__btn--close {
+  background: transparent;
+  border: none;
+  border-radius: 9999px;
+  margin: 0.35rem;
+}
+
+/* The glyph is an SVG stroked from a variable, not from `color`. */
+#cc-main .cm__btn--close svg {
+  stroke: rgba(43, 81, 66, 0.6);
+}
+
+#cc-main .cm__btn--close:hover {
+  background: rgba(43, 81, 66, 0.08);
+}
+
+#cc-main .cm__btn--close:hover svg {
+  stroke: #2b5142;
+}
+
+/* The site's cards are softly rounded; match them rather than the default box. */
+#cc-main .cm {
+  box-shadow: 0 20px 50px rgba(43, 81, 66, 0.18);
+}
