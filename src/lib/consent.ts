@@ -113,7 +113,7 @@ export function initCookieConsent(): void {
           consentModal: {
             title: 'A quiet word about cookies',
             description:
-              'We use a few cookies to understand how the shop is used, so we can make it better. Nothing is measured until you say yes, and your cart works either way.',
+              'We use cookies to understand how the shop is used. If you decline, we only collect anonymous, aggregate counts.',
             acceptAllBtn: 'Accept',
             acceptNecessaryBtn: 'Decline',
             showPreferencesBtn: 'Manage',
@@ -140,7 +140,7 @@ export function initCookieConsent(): void {
               {
                 title: 'Analytics',
                 description:
-                  'Google Analytics, which tells us anonymously which pages and blends people look at. Off unless you turn it on.',
+                  'Google Analytics, which tells us which pages and blends people look at. The cookies below are only set if you turn this on; with it off, Google still receives anonymous, aggregate counts that cannot be tied to you or to your other visits.',
                 linkedCategory: ANALYTICS,
                 cookieTable: {
                   caption: 'Cookies set when analytics is enabled',
