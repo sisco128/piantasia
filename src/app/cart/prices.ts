@@ -1,5 +1,5 @@
 /**
- * Display-only price helpers. The CMS stores prices as display strings
+ * Display-only price helpers. products.json stores prices as display strings
  * ("€13"); what customers are actually charged is resolved server-side
  * from Stripe by piantapi, so parsing here is cosmetic.
  */

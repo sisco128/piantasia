@@ -1,7 +1,6 @@
 import { Review } from '@/types/product';
-import generated from './reviews.generated.json';
+import data from './reviews.json';
 
-// Reviews are managed in the Piantasia CMS and synced into
-// reviews.generated.json at build time (see scripts/fetch-content.mjs).
-// Do not edit the generated file by hand.
-export const reviews: Review[] = generated as Review[];
+// Reviews are edited directly in reviews.json (see CLAUDE.md), in the order
+// they appear on the homepage.
+export const reviews: Review[] = data as Review[];

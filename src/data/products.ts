@@ -1,7 +1,7 @@
 import { Product } from '@/types/product';
-import generated from './products.generated.json';
+import data from './products.json';
 
-// Products are managed in the Piantasia CMS and synced into
-// products.generated.json at build time (see scripts/fetch-content.mjs).
-// Do not edit the generated file by hand.
-export const products: Product[] = generated as Product[];
+// Products are edited directly in products.json (see CLAUDE.md). The price
+// here is display-only: what customers pay comes from Stripe via piantapi,
+// looked up by the product id.
+export const products: Product[] = data as Product[];
