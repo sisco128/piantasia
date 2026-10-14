@@ -144,6 +144,9 @@ Mai pubblicare senza un OK esplicito. Il flusso:
 
 1. `pnpm build` passa.
 2. Avvia `pnpm preview`, mostra la pagina cambiata (o dai il link locale) e aspetta l'OK.
+   In una sessione cloud (claude.ai/code o app del telefono) l'anteprima locale non è
+   raggiungibile: mostra invece il testo prima e dopo, in modo leggibile e non come JSON, e
+   aspetta l'OK su quello.
 3. Commit con un messaggio chiaro in inglese (stile dei commit esistenti), poi `git push`
    su `main`.
 4. Controlla che Vercel l'abbia pubblicato:
@@ -158,7 +161,7 @@ unirle in `main` riassumi cosa cambia.
 
 ## Da non toccare senza un motivo preciso
 
-- **Mai committare segreti** (chiavi Stripe, token, `.env`). Il repo potrebbe essere pubblico.
+- **Mai committare segreti** (chiavi Stripe, token, `.env`). Il repo è pubblico.
 - Blocco Google Tag Manager / Consent Mode in `index.html`, `src/lib/consent.ts`,
   `src/lib/analytics.ts`: legati al GDPR e alla configurazione di GTM/GA4, che sta fuori dal
   codice. Un cambio qui va fatto anche lì.
