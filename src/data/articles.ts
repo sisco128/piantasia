@@ -1,7 +1,9 @@
 import { Article } from '@/types/product';
-import generated from './articles.generated.json';
+import data from './articles.json';
 
-// Articles are managed in the Piantasia CMS and synced into
-// articles.generated.json at build time (see scripts/fetch-content.mjs).
-// Do not edit the generated file by hand.
-export const articles: Article[] = generated as Article[];
+// Blog articles are edited directly in articles.json (see CLAUDE.md). The
+// body uses the Strapi blocks format, kept from when the CMS managed them.
+// Newest first, whatever order the file is in — the CMS used to sort them.
+export const articles: Article[] = [...(data as Article[])].sort((a, b) =>
+  (b.publishedAt ?? '').localeCompare(a.publishedAt ?? '')
+);
