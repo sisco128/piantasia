@@ -74,10 +74,10 @@ sito li mostra dal più recente secondo `publishedAt`.
 - Facoltativi: `seoTitle` e `metaDescription` (titolo e descrizione per Google; senza, il titolo
   è "<title> | Piantasia" e la descrizione è quella generale di `index.html`), `pinned: true`
   (l'articolo compare per primo nel Journal, prima dei più recenti: oggi lo è la guida).
-- **Lingue.** Il Journal è in inglese, tedesco e italiano (`language`: `en`, `de`, `it`). Ogni
+- **Lingue.** Il Journal è in inglese, tedesco, italiano e francese (`language`: `en`, `de`, `it`, `fr`). Ogni
   versione è un articolo a sé, con `id` nella sua lingua, e tutte le versioni dello stesso
   articolo hanno lo stesso `translationKey`. Il sito le collega da solo (link alle altre lingue,
-  hreflang, pulsanti nel Journal). Un nuovo articolo va scritto o tradotto in tutte e tre.
+  hreflang, pulsanti nel Journal). Un nuovo articolo va scritto o tradotto in tutte e quattro.
 - `cover` è facoltativa. Immagine in `public/blog/`, JPG o WebP, larga al massimo ~1600 px e
   sotto i 300 KB (ridimensiona/comprimi tu prima di committarla).
 - `content` usa il formato *blocks* di Strapi (rimasto da quando c'era il CMS), reso da

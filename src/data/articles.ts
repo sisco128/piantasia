@@ -15,6 +15,7 @@ export const LANGUAGES = [
   { code: 'en', label: 'English' },
   { code: 'de', label: 'Deutsch' },
   { code: 'it', label: 'Italiano' },
+  { code: 'fr', label: 'Français' },
 ] as const;
 
 export const DEFAULT_LANGUAGE = 'en';
