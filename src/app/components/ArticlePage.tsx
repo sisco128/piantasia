@@ -6,7 +6,7 @@ import type { ComponentProps } from 'react';
 
 type BlocksComponents = NonNullable<ComponentProps<typeof BlocksRenderer>['blocks']>;
 export type { BlocksContent };
-import { articles } from '@/data/articles';
+import { articles, translationsOf, LANGUAGES, DEFAULT_LANGUAGE } from '@/data/articles';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -77,6 +77,44 @@ export function ArticlePage() {
     window.scrollTo(0, 0);
   }, [slug]);
 
+  const versions = article ? translationsOf(article) : [];
+  const otherVersions = versions
+    .filter((a) => a.id !== article?.id)
+    .sort(
+      (a, b) =>
+        LANGUAGES.findIndex((l) => l.code === a.language) -
+        LANGUAGES.findIndex((l) => l.code === b.language)
+    );
+
+  // Page language for browsers and search engines, plus hreflang links that
+  // tell Google the language versions belong together. Both undone on leaving.
+  useEffect(() => {
+    if (!article) return;
+    const root = document.documentElement;
+    const previousLang = root.lang;
+    root.lang = article.language || DEFAULT_LANGUAGE;
+
+    const links: HTMLLinkElement[] = [];
+    if (versions.length > 1) {
+      const add = (hreflang: string, id: string) => {
+        const link = document.createElement('link');
+        link.rel = 'alternate';
+        link.hreflang = hreflang;
+        link.href = `https://piantasia.eu/blog/${id}`;
+        document.head.appendChild(link);
+        links.push(link);
+      };
+      versions.forEach((v) => add(v.language, v.id));
+      const fallback = versions.find((v) => v.language === DEFAULT_LANGUAGE);
+      if (fallback) add('x-default', fallback.id);
+    }
+    return () => {
+      root.lang = previousLang;
+      links.forEach((l) => l.remove());
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [article?.id]);
+
   if (!article) {
     return (
       <div className="min-h-screen bg-[#F5F2ED]">
@@ -125,6 +163,24 @@ export function ArticlePage() {
           </h1>
           {article.excerpt && (
             <p className="font-sans text-lg text-[#2B5142]/80 mb-8">{article.excerpt}</p>
+          )}
+
+          {otherVersions.length > 0 && (
+            <p className="font-sans text-sm text-[#2B5142]/70 mb-8">
+              {otherVersions.map((v, i) => (
+                <span key={v.id}>
+                  {i > 0 && '  ·  '}
+                  <Link
+                    to={`/blog/${v.id}`}
+                    lang={v.language}
+                    hrefLang={v.language}
+                    className="text-[#8B7BA8] underline underline-offset-2 hover:text-[#2B5142]"
+                  >
+                    {LANGUAGES.find((l) => l.code === v.language)?.label ?? v.language}
+                  </Link>
+                </span>
+              ))}
+            </p>
           )}
 
           {article.cover && (

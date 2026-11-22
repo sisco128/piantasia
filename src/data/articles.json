@@ -3,6 +3,7 @@
     "id": "going-out-with-friends-piantasia",
     "title": "I Can Go Out With My Friends Again (And I'm Not Going Back to Cigarettes)",
     "language": "en",
+    "translationKey": "story-francesco",
     "excerpt": "I gave up my social life for almost two years to stay away from smoking triggers. Then I found Piantasia — and got it all back.",
     "content": [
       {
@@ -344,6 +345,7 @@
     "seoTitle": "How to Use Herbal Blends: 5 Ways and What's Inside | Piantasia",
     "metaDescription": "Five ways to use a tobacco-free, nicotine-free herbal blend: on its own, with tobacco, as a base, in a vaporizer or a shisha. Plus the herbs inside each blend.",
     "language": "en",
+    "translationKey": "guide-how-to-use",
     "excerpt": "There is no single right way to use a herbal blend. Here is how our customers do it.",
     "content": [
       {
@@ -807,6 +809,7 @@
     "seoTitle": "Miscela di erbe senza tabacco: la storia di Fabienne | Piantasia",
     "metaDescription": "Fabienne aveva deciso di smettere con il tabacco a un ritiro di yoga. La sera, al posto della sigaretta, il Blend 02: una miscela di erbe senza nicotina.",
     "language": "it",
+    "translationKey": "story-fabienne",
     "excerpt": "Aveva deciso di smettere durante un ritiro di yoga. La prima sera, al posto della sigaretta, è arrivata una Piantasia.",
     "content": [
       {
@@ -1080,6 +1083,7 @@
     "seoTitle": "Kräutermischung ohne Tabak und Nikotin: Julians Abendritual | Piantasia",
     "metaDescription": "Julian raucht gelegentlich und wollte es bewusster tun. Wie Blend 01, eine Kräutermischung ohne Tabak und Nikotin, Teil seines Abendrituals wurde.",
     "language": "de",
+    "translationKey": "story-julian",
     "excerpt": "Er wollte sein Abendritual behalten, aber ohne Nikotin und ohne Zusatzstoffe. So wurde Blend 01 Teil davon.",
     "content": [
       {
@@ -1317,6 +1321,2572 @@
       "Blend 01",
       "ohne Tabak",
       "ohne Nikotin"
+    ],
+    "publishedAt": "2026-11-22T11:00:00.000Z"
+  },
+  {
+    "id": "fabiennes-letzte-zigarette",
+    "title": "Fabiennes letzte Zigarette (und das Ritual, das ihren Platz eingenommen hat)",
+    "seoTitle": "Kräutermischung ohne Tabak: Fabiennes Geschichte | Piantasia",
+    "metaDescription": "Fabienne hatte beschlossen, auf einem Yoga-Retreat mit dem Tabak aufzuhören. Abends, statt der Zigarette, Blend 02: eine Kräutermischung ohne Nikotin.",
+    "language": "de",
+    "translationKey": "story-fabienne",
+    "excerpt": "Sie hatte beschlossen, auf einem Yoga-Retreat aufzuhören. Am ersten Abend nahm eine Piantasia den Platz der Zigarette ein.",
+    "content": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ich habe Fabienne auf einem Yoga-Retreat kennengelernt."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Am ersten Tag erzählte sie mir, dass sie an diesem Morgen ihre letzte Zigarette geraucht hatte. Aufhören war die Intention, die sie mit ins Retreat gebracht hatte."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ich musste innerlich lächeln. Ich wusste, dass ich alles miterleben würde, was danach kommt: die ersten Tage ohne Nikotin, den Entzug, den Körper, der verlangt."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Der erste Abend"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ich musste nicht lange warten."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Noch am selben Abend sah ich, wie sie zwischen den Leuten vom Retreat herumging und fragte, ob jemand eine Zigarette für sie hätte. Zehn Zigaretten am Tag, jahrelang, verschwinden nicht durch eine Intention, die man morgens aufschreibt."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ich rauchte gerade eine Piantasia, Blend 02. Ich bot ihr eine an."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Es war nicht nur das Nikotin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Wer schon einmal versucht hat aufzuhören, kennt das. Dir fehlt nicht nur die Substanz. Dir fehlt die Geste: der Moment am Ende des Tages, in dem du innehältst, die Hände, die wissen, was zu tun ist, der langsame Atemzug vor dem Schlafengehen."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Diese Geste konnte Fabienne behalten. Nur ohne Nikotin."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Blend 02"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Blend 02 ist unser weichster Blend: Himbeerblatt, Lavendel, Kamille, Passionsblume, Eibisch und Damiana. Lavendel und Kamille sind Pflanzen, die seit jeher mit Entspannung und dem Abend verbunden werden."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Von diesem Abend an wurde er ihr Moment vor dem Schlafengehen. Jeden Tag, am Ende des Tages, drehte sie sich ihren Blend 02."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Von der Gewohnheit zum Ritual"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Gegen Ende des Retreats sagte sie mir etwas, das ich nie vergessen habe: Es wurde zu einem Ritual."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Nicht mehr etwas, das man aus Bedürfnis tut, sondern ein Moment, den man bewusst genießt. Es half ihr durch die schwersten Tage des Entzugs."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Wieder zu Hause kaufte sie ihre erste Box."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Heute"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Fabienne hat ihre zehn Zigaretten am Tag hinter sich gelassen."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Heute raucht sie nur noch gelegentlich. Ab und zu gönnt sie sich eine Zigarette, ohne in die tägliche Gewohnheit zurückzufallen. Und abends bleibt ihr Ritual dasselbe."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ihre Geschichte ist eine Geschichte, kein Versprechen: Jeder hat seinen eigenen Weg. Aber sie ist der Grund, warum ich Piantasia gegründet habe. Die Geste genießen und das Nikotin loslassen."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Wo kann ich Piantasia kaufen?",
+            "bold": true
+          },
+          {
+            "type": "text",
+            "text": " Auf "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". Versand in ganz Deutschland und Europa."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Piantasia ist eine tabak- und nikotinfreie Kräutermischung. Wie alle unsere Blends wird er von Hand in Berlin gemacht, in kleinen Chargen: Die Kräuter werden von Stielen befreit, sanft gemahlen und gemischt, bis die Konsistenz weich ist. Stunden an Arbeit für jede Charge, denn ein langsames Ritual verdient eine langsame Herstellung."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Entdecke unsere Blends auf "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "author": "Annalisa",
+    "category": "Personal Stories",
+    "tags": [
+      "Fabienne",
+      "Blend 02",
+      "ohne Tabak",
+      "ohne Nikotin"
+    ],
+    "publishedAt": "2026-11-22T10:00:00.000Z"
+  },
+  {
+    "id": "fabiennes-last-cigarette",
+    "title": "Fabienne's Last Cigarette (and the Ritual That Took Its Place)",
+    "seoTitle": "Tobacco-Free Herbal Blend: Fabienne's Story | Piantasia",
+    "metaDescription": "Fabienne decided to quit tobacco at a yoga retreat. In the evening, instead of a cigarette, Blend 02: a nicotine-free herbal blend.",
+    "language": "en",
+    "translationKey": "story-fabienne",
+    "excerpt": "She decided to quit during a yoga retreat. On the first evening, a Piantasia took the place of her cigarette.",
+    "content": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "I met Fabienne at a yoga retreat."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "On the first day she told me she had smoked her last cigarette that morning. Quitting was the intention she had brought to the retreat."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "I smiled to myself. I knew I would witness everything that comes after: the first days without nicotine, the withdrawal, the body asking for more."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "The first evening"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "I didn't have to wait long."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "That same evening I saw her going around the people at the retreat, asking if anyone had a cigarette to spare. Ten cigarettes a day for years don't disappear with an intention written down in the morning."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "I was smoking a Piantasia, Blend 02. I offered her one."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "It wasn't just the nicotine"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Anyone who has tried to quit knows this. You don't only miss the substance. You miss the gesture: the moment at the end of the day when you stop, your hands knowing what to do, the slow breath before going to sleep."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "That gesture, Fabienne could keep. Just without the nicotine."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Blend 02"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Blend 02 is our softest blend: raspberry leaf, lavender, chamomile, passionflower, marshmallow leaf and damiana. Lavender and chamomile are plants that have long been associated with relaxation and the evening."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "From that evening on, it became her moment before sleep. Every day, at the end of the day, she rolled her Blend 02."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "From habit to ritual"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Towards the end of the retreat she told me something I have never forgotten: it was becoming a ritual."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "No longer something to do out of need, but a moment to enjoy with intention. It was helping her through the hardest days of withdrawal."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Back home, she bought her first box."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Today"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Fabienne has left her ten cigarettes a day behind."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Today she is an occasional smoker. Now and then she allows herself a cigarette, without falling back into the daily habit. And in the evening her ritual stays the same."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Hers is a story, not a promise: everyone has their own path. But it is the reason I created Piantasia. Enjoying the gesture, letting go of the nicotine."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Where can I buy Piantasia?",
+            "bold": true
+          },
+          {
+            "type": "text",
+            "text": " At "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". We ship from Berlin across Europe."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Piantasia is a tobacco-free, nicotine-free herbal blend. Like all our blends, it is made by hand in Berlin, in small batches: the herbs are cleaned of stems, gently milled and mixed until the texture is soft. Hours of work for every batch, because a slow ritual deserves to be prepared slowly."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Discover our blends at "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "author": "Annalisa",
+    "category": "Personal Stories",
+    "tags": [
+      "Fabienne",
+      "Blend 02",
+      "tobacco-free",
+      "nicotine-free"
+    ],
+    "publishedAt": "2026-11-22T10:00:00.000Z"
+  },
+  {
+    "id": "wieder-ausgehen-ohne-zigaretten",
+    "title": "Ich kann wieder mit meinen Freunden ausgehen (und ich fange nicht wieder mit Zigaretten an)",
+    "language": "de",
+    "translationKey": "story-francesco",
+    "excerpt": "Fast zwei Jahre lang habe ich auf mein soziales Leben verzichtet, um allem aus dem Weg zu gehen, was mich zum Rauchen bringt. Dann habe ich Piantasia gefunden und alles zurückbekommen.",
+    "content": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Fast zwei Jahre lang hatte ich eine Regel: keine Bars, keine Abende unterwegs, keine Partys, auf denen geraucht wird."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Das klingt extrem. Aber wenn du je versucht hast, von Zigaretten wegzubleiben, weißt du genau, was ich meine. In dem Moment, in dem sich jemand neben dir eine anzündet, ist alle Willenskraft, die du dir über Monate aufgebaut hast, in etwa drei Sekunden weg. Aus einer Zigarette werden fünf. Aus fünf eine Schachtel. Und am nächsten Morgen wachst du auf, hasst dich selbst und stehst wieder am Anfang."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Also habe ich einen Deal mit mir gemacht. Ich habe meine Lunge über mein soziales Leben gestellt. Und eine Weile hat das funktioniert."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Aber es war einsam."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Der wahre Preis des Rauchstopps, über den niemand spricht"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Wenn du aufhörst, feiern alle die gesundheitlichen Erfolge, und die sind echt. Aber es gibt eine Seite des Aufhörens, die es nicht in die Motivationsposts schafft: "
+          },
+          {
+            "type": "text",
+            "text": "Du verlierst einen großen Teil deines sozialen Rituals.",
+            "bold": true
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Rauchen ist eng damit verwoben, wie Menschen zueinanderfinden. Die Zigarettenpause auf einer Party. Um Mitternacht vor einer Bar stehen und über alles und nichts reden. Der Moment, in dem jemand fragt „Rauchst du?\" und du plötzlich mitten in einem Gespräch bist."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Wenn du aufhörst, verlierst du nicht nur die Zigarette, sondern auch das soziale Signal, das dazugehörte. Ich wusste nicht, wie ich mit leeren Händen vor einer Bar stehen sollte. Ich fühlte mich wie ein Fremder an meinem eigenen Tisch."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Also bin ich nicht mehr ausgegangen. Das war einfacher."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Wie ich Piantasia gefunden habe"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Eine Freundin, dieselbe, die später Piantasia mitgegründet hat, erzählte mir immer wieder von Kräutermischungen. Ohne Tabak, ohne Nikotin, aber wirklich rauchbar. Ich war skeptisch. Ich hatte schon Kräuterzigaretten probiert, und die schmeckten nach verbranntem Rasenschnitt."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Aber sie zeigte mir, woran sie mit Piantasia arbeitete. Dahinter steckten echte Gedanken: echte Kräuter, echter Geschmack, ein echtes Ritual. Es war kein Nikotinersatz. Es war ein Raucherlebnis ohne den Teil, der mich kaputt machte."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Als ich es zum ersten Mal probierte, war ich überrascht. Es fühlte sich richtig an. Nicht wie ein trauriger Ersatz. Wie etwas, das ich wirklich genießen konnte."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Der Abend, an dem ich es ausprobiert habe"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Eine Geburtstagsparty stand an: ein enger Freund, Leute, die ich wirklich vermisst hatte. Ich beschloss hinzugehen, und ich nahm Piantasia mit."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ich will nicht lügen, ich war nervös. Als sich das erste Mal jemand in meiner Nähe eine Zigarette anzündete, spürte ich diesen vertrauten Sog. Aber ich hatte etwas in der Tasche. Ich ging nach draußen, zündete mir eine Piantasia an und gesellte mich zur Gruppe."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Und das war's. Ich stand da, redete, lachte, fühlte mich wieder als Teil des Ganzen, ohne dass das Verlangen außer Kontrolle geriet. Ich rauchte eine. Etwas später noch eine. Mehr brauchte ich nicht."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "An diesem Abend habe ich keine Zigarette angerührt. Am nächsten auch nicht. Und am übernächsten auch nicht."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Warum es (für mich) funktioniert"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ich bin kein Arzt und werde dir nicht sagen, was du mit deinem Körper tun sollst. Aber ich glaube, das ist passiert:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Der Auslöser hatte nie wirklich mit Nikotin zu tun.",
+            "bold": true
+          },
+          {
+            "type": "text",
+            "text": " Es ging um die Handlung: die Pause vom Raum, das Ritual, etwas anzuzünden, das Gefühl, zur Gruppe draußen zu gehören. Piantasia gab mir all das, ohne den Haken der Sucht."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Eine oder zwei Piantasia in Gesellschaft sind nicht im Entferntesten wie eine Schachtel Zigaretten am Stück. Der Drang, der sich früher völlig unkontrollierbar anfühlte, wurde einfach … nicht stärker. Er hatte einen Ort, wohin er gehen konnte, und dort blieb er."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Ich gehe wieder aus"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Das klingt vielleicht nach einer Kleinigkeit. Ist es nicht."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Letzten Monat war ich auf vier Veranstaltungen. Ein Geburtstag, ein Abendessen mit Kollegen mit Drinks danach, ein Sonntagnachmittag im Biergarten, ein langer Abend mit alten Freunden, die ich seit Jahren nicht gesehen hatte. Ich war bei allen wirklich da: Ich habe nicht auf die Uhr geschaut und auf den Moment gewartet, gehen zu können, und mich nicht verkrampft in eine Ecke gedrückt."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Mit dem Rauchen aufzuhören hat mich zwei Jahre Ausgehen gekostet. Piantasia hat mir mein soziales Leben zurückgegeben."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Wenn es dir so geht wie mir damals, wenn du Situationen meidest, die dich triggern, und Menschen vermisst, weil dir das Risiko zu hoch erscheint, könnte es sich lohnen, es auszuprobieren. Nicht als Heilmittel, nicht als medizinische Lösung, sondern als Ritual, das dort Platz findet, wo früher das alte war."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Du verdienst es, dabei zu sein."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Piantasia ist eine tabak- und nikotinfreie Kräutermischung zum Rauchen, hergestellt in Berlin. Wenn du nach Alternativen zu Zigaretten suchst, "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "entdecke unsere Blends auf piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "author": "Francesco",
+    "category": "Personal Stories",
+    "tags": [
+      "Tabak-Alternative",
+      "mit dem Rauchen aufhören soziales Leben",
+      "Kräuterzigaretten",
+      "tabakfrei rauchen",
+      "nikotinfreie Mischung",
+      "ausgehen nach dem Rauchstopp"
+    ],
+    "publishedAt": "2026-07-27T19:37:13.269Z"
+  },
+  {
+    "id": "uscire-con-gli-amici-senza-sigarette",
+    "title": "Posso di nuovo uscire con i miei amici (e non tornerò alle sigarette)",
+    "language": "it",
+    "translationKey": "story-francesco",
+    "excerpt": "Per quasi due anni ho rinunciato alla mia vita sociale per stare lontano da tutto ciò che mi faceva venire voglia di fumare. Poi ho trovato Piantasia, e mi sono ripreso tutto.",
+    "content": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Per quasi due anni ho avuto una regola: niente bar, niente serate fuori, niente feste dove la gente fuma."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Sembra estremo. Ma se hai mai provato a stare lontano dalle sigarette, sai esattamente cosa intendo. Nel momento in cui qualcuno se ne accende una accanto a te, tutta la forza di volontà costruita in mesi sparisce in circa tre secondi. Una sigaretta diventa cinque. Cinque diventano un pacchetto. E la mattina dopo ti svegli odiandoti, di nuovo al punto di partenza."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Così ho fatto un patto con me stesso. Ho scelto i miei polmoni invece della mia vita sociale. E per un po' ha funzionato."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ma ero solo."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Il vero costo di smettere di fumare di cui nessuno parla"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Quando smetti, tutti celebrano i benefici per la salute, e sono reali. Ma c'è un lato dello smettere che non finisce nei post motivazionali: "
+          },
+          {
+            "type": "text",
+            "text": "perdi una parte enorme del tuo rituale sociale.",
+            "bold": true
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Il fumo è intrecciato al modo in cui le persone si incontrano. La pausa sigaretta a una festa. Stare fuori da un bar a mezzanotte parlando di tutto e di niente. Quel momento in cui qualcuno ti chiede \"fumi?\" e all'improvviso sei dentro una conversazione."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Quando smetti, non perdi solo la sigaretta: perdi il segnale sociale che portava con sé. Non sapevo come stare fuori da un bar a mani vuote. Mi sentivo un estraneo al mio stesso tavolo."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Così ho smesso di uscire. Era più facile."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Come ho trovato Piantasia"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Un'amica, la stessa che poi ha co-fondato Piantasia, continuava a parlarmi delle miscele di erbe. Senza tabacco, senza nicotina, ma che si possono davvero fumare. Ero scettico. Avevo già provato le sigarette alle erbe e sapevano di erba tagliata bruciata."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ma lei mi ha mostrato quello su cui stava lavorando con Piantasia. C'era un pensiero vero dietro: erbe vere, sapore vero, un rituale vero. Non era un sostituto della nicotina. Era l'esperienza del fumare senza la parte che mi stava distruggendo."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "La prima volta che l'ho provata sono rimasto sorpreso. Mi sembrava giusta. Non un triste sostituto. Qualcosa che potevo davvero godermi."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "La sera in cui l'ho messa alla prova"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Si avvicinava una festa di compleanno: un amico stretto, persone che mi mancavano davvero. Ho deciso di andarci, e ho portato Piantasia con me."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Non mentirò, ero nervoso. La prima volta che qualcuno ha acceso una sigaretta vicino a me ho sentito quella spinta familiare. Ma avevo qualcosa in tasca. Sono uscito, ho acceso una Piantasia e mi sono unito al gruppo."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ed è stato tutto lì. Ero lì, parlavo, ridevo, mi sentivo di nuovo parte delle cose, senza che la voglia andasse fuori controllo. Ne ho fumata una. Poi, un po' più tardi, un'altra. Era tutto quello che mi serviva."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Quella sera non ho toccato una sigaretta. Né quella dopo. Né quella dopo ancora."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Perché funziona (per me)"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Non sono un medico e non ti dirò cosa fare con il tuo corpo. Ma ecco cosa penso stesse succedendo:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Il fattore scatenante non è mai stato davvero la nicotina.",
+            "bold": true
+          },
+          {
+            "type": "text",
+            "text": " Era il gesto: la pausa dalla stanza, il rituale di accendere qualcosa, la sensazione di far parte del gruppo fuori. Piantasia mi ha dato tutto questo senza l'aggancio della dipendenza."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Una o due Piantasia in compagnia non hanno niente a che vedere con fumare un pacchetto di sigarette una dopo l'altra. L'impulso che prima sembrava completamente fuori controllo semplicemente... non cresceva. Aveva un posto dove andare, e lì restava."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Esco di nuovo"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Può sembrare una piccola cosa. Non lo è."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Il mese scorso sono andato a quattro eventi. Un compleanno, una cena di lavoro con drink dopo, una domenica pomeriggio in un biergarten, una serata fino a tardi con vecchi amici che non vedevo da anni. Ero presente a tutti: non guardavo l'orologio aspettando di andarmene, non stringevo i denti in un angolo."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Smettere di fumare mi è costato due anni di serate. Piantasia mi ha restituito la mia vita sociale."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Se sei nella stessa situazione in cui ero io, se eviti le situazioni che ti fanno venire voglia di fumare, se ti mancano le persone perché il rischio sembra troppo alto, potrebbe valere la pena provare. Non come una cura, non come una soluzione medica, ma come un rituale che si inserisce dove c'era quello vecchio."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Meriti di essere lì, insieme agli altri."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Piantasia è una miscela di erbe da fumare senza tabacco e senza nicotina, fatta a Berlino. Se stai cercando alternative alle sigarette, "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "scopri i nostri blend su piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "author": "Francesco",
+    "category": "Personal Stories",
+    "tags": [
+      "alternativa al tabacco",
+      "smettere di fumare vita sociale",
+      "sigarette alle erbe",
+      "fumare senza tabacco",
+      "miscela senza nicotina",
+      "uscire dopo aver smesso di fumare"
+    ],
+    "publishedAt": "2026-07-27T19:37:13.269Z"
+  },
+  {
+    "id": "kraeutermischungen-verwenden",
+    "title": "Kräutermischungen verwenden: Fünf Wege, Piantasia zu einem Teil deines Rituals zu machen",
+    "seoTitle": "Kräutermischungen verwenden: 5 Wege und was drin ist | Piantasia",
+    "metaDescription": "Fünf Wege, eine Kräutermischung ohne Tabak und Nikotin zu nutzen: pur, mit Tabak, als Basis, im Vaporizer oder in der Shisha. Plus die Kräuter in jedem Blend.",
+    "language": "de",
+    "translationKey": "guide-how-to-use",
+    "excerpt": "Es gibt nicht den einen richtigen Weg, eine Kräutermischung zu verwenden. So machen es unsere Kundinnen und Kunden.",
+    "content": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Eine Kräutermischung ist eine Mischung aus getrockneten Pflanzen, ohne Tabak und ohne Nikotin. Manche drehen sie pur. Manche mischen sie mit Tabak. Manche nutzen sie als Basis für andere Kräuter."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Hier sind die fünf Wege, die wir am häufigsten sehen."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "1. Pur"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Der einfachste Weg: wie Tabak drehen. Unsere Blends sind leicht gemahlen, für eine weiche, gut zu verarbeitende Konsistenz."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Blend 01 ist frisch und minzig, gemacht für den Tag. Blend 02 ist weich und blumig, gemacht für den Abend. Blend 03 ist klar und neutral."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "2. Mit Tabak gemischt"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Wenn du einen Blend mit deinem Tabak mischst, ist in jeder Zigarette weniger Tabak: weniger Nikotin, weniger Zusatzstoffe."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Auch der Geschmack verändert sich. Blend 01 bringt eine frische, minzige Note. Blend 02 eine weichere, blumige. Manche nutzen das, um Schritt für Schritt zu reduzieren, statt von heute auf morgen aufzuhören."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "3. Als Basis für andere Kräuter"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Blend 03 ist als neutrale Basis gedacht. Er trägt den Charakter von allem, womit du ihn mischst, ohne Nikotin hinzuzufügen. Wenn du deine Kräuter normalerweise mit Tabak mischst, ist er eine nikotinfreie Alternative."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "4. Im Vaporizer"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Die Kräuter können auch in einen Vaporizer für trockene Kräuter, für alle, die sie lieber nicht verbrennen möchten."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "5. In der Shisha"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Die Blends lassen sich auch in der Shisha verwenden, als tabakfreie Option."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Was in unseren Blends steckt"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Jeder Piantasia-Blend besteht aus zertifizierten Bio-Kräutern aus Italien und Deutschland. Kein Tabak, kein Nikotin, keine Zusatzstoffe. Das sind die Pflanzen, die du darin findest, und was jede einzelne mitbringt."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Königskerze:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " ein weiches, flauschiges Blatt mit mildem Geschmack. Die klassische Basis von Kräutermischungen, für ein gleichmäßiges Abbrennen. In Blend 01 und 03."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Eibischblatt:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " eine weiche Textur, die die Mischung zusammenhält und angenehm macht. In allen drei Blends."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Himbeerblatt:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " leicht und blättrig, mit einer feinen Süße. In allen drei Blends."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Pfefferminze:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " frisch und kühlend. In Blend 01."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Zitronenmelisse:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " hell, zitronig und grün. In Blend 01 und 03."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Damiana:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " warm und sanft aromatisch. In Blend 01 und 02."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Lavendel:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " blumig und ruhig. In Blend 02."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Kamille:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " weich und rund, mit einer leichten blumigen Süße. In Blend 02."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Passionsblume:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " mild und grün. In Blend 02 und 03."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Lindenblüte:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " zart und sanft blumig. In Blend 03."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Kurz gesagt: Blend 01 ist um Pfefferminze aufgebaut, Blend 02 um Himbeerblatt und Blüten, Blend 03 um weiche, neutrale Blätter."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Drei Menschen, drei Rituale"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Francesco hat fast zwei Jahre lang Bars und Partys gemieden, um nicht wieder mit dem Rauchen anzufangen. Mit Piantasia in der Tasche ging er wieder aus: eine oder zwei auf einer Party, statt einer ganzen Schachtel. "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu/blog",
+            "children": [
+              {
+                "type": "text",
+                "text": "Lies seine Geschichte →"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Fabienne hat sich auf einem Yoga-Retreat entschieden aufzuhören. Am ersten Abend nahm Blend 02 den Platz ihrer Zigarette vor dem Schlafengehen ein. Heute hat sie ihre zehn Zigaretten am Tag hinter sich gelassen, und Blend 02 ist immer noch ihr Abendritual. "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu/blog",
+            "children": [
+              {
+                "type": "text",
+                "text": "Lies ihre Geschichte →"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Julian raucht ab und zu: mit Freunden, an stressigen Tagen, abends mit seinen eigenen Kräutern. Er wollte etwas Bewussteres, ohne Nikotin und Zusatzstoffe. Der frische, minzige Geschmack von Blend 01 wurde Teil seines Abendrituals. "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu/blog",
+            "children": [
+              {
+                "type": "text",
+                "text": "Lies seine Geschichte →"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Wo kann ich Piantasia kaufen?",
+            "bold": true
+          },
+          {
+            "type": "text",
+            "text": " Auf "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". Wir versenden von Berlin aus in ganz Europa."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Piantasia ist eine Marke für Kräutermischungen ohne Tabak und ohne Nikotin. Jeder Blend wird von Hand in Berlin gemacht, in kleinen Chargen. Die Kräuter werden einzeln von Stielen befreit, sanft gemahlen und gemischt, bis die Konsistenz weich und gleichmäßig ist. Jede Charge kostet Stunden an Arbeit."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Es ist ein langsamer Prozess, mit Absicht. Ein Blend für ein langsames Ritual sollte genauso gemacht werden. Entdecke unsere Blends auf "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "author": "Annalisa",
+    "category": "Guides",
+    "tags": [
+      "Kräutermischung",
+      "ohne Tabak",
+      "ohne Nikotin",
+      "Anwendung"
+    ],
+    "publishedAt": "2026-11-22T09:00:00.000Z"
+  },
+  {
+    "id": "come-usare-le-miscele-di-erbe",
+    "title": "Come usare le miscele di erbe: cinque modi per fare di Piantasia parte del tuo rituale",
+    "seoTitle": "Come usare le miscele di erbe: 5 modi e cosa c'è dentro | Piantasia",
+    "metaDescription": "Cinque modi per usare una miscela di erbe senza tabacco e senza nicotina: da sola, con il tabacco, come base, nel vaporizzatore o nel narghilè. E le erbe di ogni blend.",
+    "language": "it",
+    "translationKey": "guide-how-to-use",
+    "excerpt": "Non esiste un unico modo giusto di usare una miscela di erbe. Ecco come la usano i nostri clienti.",
+    "content": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Una miscela di erbe è un mix di piante essiccate, senza tabacco e senza nicotina. C'è chi la rolla da sola. C'è chi la mescola al tabacco. C'è chi la usa come base per altre erbe."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ecco i cinque modi che vediamo più spesso."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "1. Da sola"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Il modo più semplice: rollarla come il tabacco. I nostri blend sono macinati leggermente, per una consistenza morbida e facile da lavorare."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Il Blend 01 è fresco e mentolato, pensato per il giorno. Il Blend 02 è morbido e floreale, pensato per la sera. Il Blend 03 è pulito e neutro."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "2. Mescolata al tabacco"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Mescolare un blend al tuo tabacco significa meno tabacco in ogni sigaretta: meno nicotina, meno additivi."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Cambia anche il gusto. Il Blend 01 dà una nota fresca e mentolata. Il Blend 02 una più morbida e floreale. C'è chi la usa per ridurre passo dopo passo, invece di smettere da un giorno all'altro."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "3. Come base per altre erbe"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Il Blend 03 è pensato come base neutra. Porta il carattere di qualunque cosa ci mescoli, senza aggiungere nicotina. Se di solito mescoli le tue erbe con il tabacco, è un'alternativa senza nicotina."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "4. Nel vaporizzatore"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Le erbe si possono usare anche in un vaporizzatore per erbe secche, per chi preferisce non bruciarle."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "5. Nel narghilè"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "I blend si possono usare anche nel narghilè, come opzione senza tabacco."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Cosa c'è nei nostri blend"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ogni blend Piantasia è fatto con erbe biologiche certificate dall'Italia e dalla Germania. Niente tabacco, niente nicotina, niente additivi. Queste sono le piante che trovi dentro, e cosa porta ognuna."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Verbasco:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " una foglia morbida e vellutata dal gusto delicato. La base classica delle miscele di erbe, per una combustione uniforme. Nel Blend 01 e 03."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Foglia di altea:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " una consistenza morbida che aiuta la miscela a restare compatta e a essere piacevole. In tutti e tre i blend."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Foglia di lampone:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " leggera e verde, con una dolcezza sottile. In tutti e tre i blend."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Menta piperita:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " fresca e rinfrescante. Nel Blend 01."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Melissa:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " vivace, agrumata e verde. Nel Blend 01 e 03."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Damiana:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " calda e delicatamente aromatica. Nel Blend 01 e 02."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Lavanda:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " floreale e calma. Nel Blend 02."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Camomilla:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " morbida e rotonda, con una leggera dolcezza floreale. Nel Blend 02."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Passiflora:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " delicata e verde. Nel Blend 02 e 03."
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "type": "text",
+                "text": "Fiore di tiglio:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " delicato e leggermente floreale. Nel Blend 03."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "In breve: il Blend 01 è costruito intorno alla menta piperita, il Blend 02 intorno alla foglia di lampone e ai fiori, il Blend 03 intorno a foglie morbide e neutre."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Tre persone, tre rituali"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Francesco per quasi due anni è stato lontano da bar e feste, per non ricadere nel fumo. Con Piantasia in tasca ha ricominciato a uscire: una o due a una festa, invece di un pacchetto. "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu/blog",
+            "children": [
+              {
+                "type": "text",
+                "text": "Leggi la sua storia →"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Fabienne ha deciso di smettere durante un ritiro di yoga. La prima sera, il Blend 02 ha preso il posto della sigaretta prima di dormire. Oggi ha lasciato le sue dieci sigarette al giorno, e il Blend 02 è ancora il suo rituale della sera. "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu/blog",
+            "children": [
+              {
+                "type": "text",
+                "text": "Leggi la sua storia →"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Julian fuma ogni tanto: con gli amici, nei giorni stressanti, la sera con le sue erbe. Voleva qualcosa di più consapevole, senza nicotina né additivi. Il gusto fresco e mentolato del Blend 01 è diventato parte del suo rituale serale. "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu/blog",
+            "children": [
+              {
+                "type": "text",
+                "text": "Leggi la sua storia →"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Dove posso comprare Piantasia?",
+            "bold": true
+          },
+          {
+            "type": "text",
+            "text": " Su "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". Spediamo da Berlino in tutta Europa."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Piantasia è un brand di erbe senza tabacco e senza nicotina. Ogni blend è fatto a mano a Berlino, in piccoli lotti. Le erbe vengono pulite dai rametti una per una, macinate delicatamente e mescolate fino a una consistenza morbida e uniforme. Ci vogliono ore di lavoro per ogni lotto."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "È un processo lento, di proposito. Un blend pensato per un rituale lento deve essere fatto allo stesso modo. Scopri i nostri blend su "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "author": "Annalisa",
+    "category": "Guides",
+    "tags": [
+      "miscela di erbe",
+      "senza tabacco",
+      "senza nicotina",
+      "come usarla"
+    ],
+    "publishedAt": "2026-11-22T09:00:00.000Z"
+  },
+  {
+    "id": "julian-evening-ritual",
+    "title": "Julian Doesn't Smoke Often. But When He Does, He Does It Consciously.",
+    "seoTitle": "Tobacco-Free, Nicotine-Free Herbal Blend: Julian's Evening Ritual | Piantasia",
+    "metaDescription": "Julian smokes occasionally and wanted to do it more consciously. How Blend 01, a herbal blend without tobacco or nicotine, became part of his evening ritual.",
+    "language": "en",
+    "translationKey": "story-julian",
+    "excerpt": "He wanted to keep his evening ritual, but without nicotine and without additives. That's how Blend 01 became part of it.",
+    "content": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Julian is not a typical smoker."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "He smokes now and then. With friends on a long night. On days when the stress gets too much. And in the evening, when he winds down with his own herbs."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "For a long time he didn't think about it."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "What bothered him"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Eventually he did. Not the ritual itself, but what came with it: tobacco, nicotine, additives. Things he had never consciously chosen."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "He didn't want to quit. He wanted to smoke more consciously. To know what was in his blend."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "How he found Piantasia"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Through friends."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "First it was the tin that caught his eye. Then what was inside: organic herbs, no tobacco, no nicotine, nothing artificial."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Blend 01"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "His favourite is Blend 01: fresh and light, with peppermint, mullein, raspberry leaf, lemon balm, marshmallow and damiana."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "He likes the cool, minty taste. And that it is pleasantly smooth, without scratching the throat."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "The evening"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "In the evening he mixes Blend 01 with his own herbs, instead of using tobacco."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "The moment has stayed the same. The evening, the calm, the pause. Just without nicotine."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "More conscious, no less enjoyable"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Julian doesn't enjoy smoking any less today. He smokes more consciously."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "And that's exactly what Piantasia is made for: for everyone who loves the ritual, but not the nicotine."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Where can I buy Piantasia?",
+            "bold": true
+          },
+          {
+            "type": "text",
+            "text": " At "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". We ship across Germany and Europe."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Piantasia is a tobacco-free, nicotine-free herbal blend. Like all our blends, it is made by hand in Berlin, in small batches: the herbs are cleaned of stems, gently milled and mixed until the texture is soft and even. Hours of work for every batch, because a slow ritual deserves to be made slowly."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Discover our blends at "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "author": "Annalisa",
+    "category": "Personal Stories",
+    "tags": [
+      "Julian",
+      "Blend 01",
+      "tobacco-free",
+      "nicotine-free"
+    ],
+    "publishedAt": "2026-11-22T11:00:00.000Z"
+  },
+  {
+    "id": "julian-rituale-della-sera",
+    "title": "Julian non fuma spesso. Ma quando lo fa, lo fa con consapevolezza.",
+    "seoTitle": "Miscela di erbe senza tabacco e senza nicotina: il rituale serale di Julian | Piantasia",
+    "metaDescription": "Julian fuma ogni tanto e voleva farlo in modo più consapevole. Come il Blend 01, una miscela di erbe senza tabacco e senza nicotina, è diventato parte del suo rituale serale.",
+    "language": "it",
+    "translationKey": "story-julian",
+    "excerpt": "Voleva tenere il suo rituale della sera, ma senza nicotina e senza additivi. Così il Blend 01 ne è diventato parte.",
+    "content": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Julian non è un fumatore classico."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Fuma ogni tanto. Con gli amici, in una lunga serata. Nei giorni in cui lo stress diventa troppo. E la sera, quando si rilassa con le sue erbe."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Per molto tempo non ci ha pensato."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Cosa lo infastidiva"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "A un certo punto sì. Non il rituale in sé, ma quello che arrivava insieme: tabacco, nicotina, additivi. Cose che non aveva mai scelto consapevolmente."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Non voleva smettere. Voleva fumare in modo più consapevole. Sapere cosa c'è nella sua miscela."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Come ha trovato Piantasia"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Tramite amici."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Prima l'ha colpito la scatola. Poi il contenuto: erbe biologiche, niente tabacco, niente nicotina, niente di artificiale."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Il Blend 01"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Il suo preferito è il Blend 01: fresco e leggero, con menta piperita, verbasco, foglia di lampone, melissa, altea e damiana."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Gli piace il gusto fresco e mentolato. E che sia piacevolmente morbido, senza grattare in gola."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "La sera"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "La sera mescola il Blend 01 con le sue erbe, invece di usare il tabacco."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Il momento è rimasto lo stesso. La sera, la calma, la pausa. Solo senza nicotina."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "type": "text",
+            "text": "Più consapevole, non meno bello"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Oggi a Julian non piace fumare di meno. Fuma in modo più consapevole."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Ed è proprio per questo che è fatta Piantasia: per chi ama il rituale, ma non la nicotina."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Dove posso comprare Piantasia?",
+            "bold": true
+          },
+          {
+            "type": "text",
+            "text": " Su "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". Spediamo da Berlino in Italia e nel resto d'Europa."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Piantasia è una miscela di erbe senza tabacco e senza nicotina. Come tutti i nostri blend, è fatto a mano a Berlino, in piccoli lotti: le erbe vengono pulite dai rametti, macinate delicatamente e mescolate fino a una consistenza morbida e uniforme. Ore di lavoro per ogni lotto, perché un rituale lento merita di essere preparato lentamente."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "Scopri i nostri blend su "
+          },
+          {
+            "type": "link",
+            "url": "https://piantasia.eu",
+            "children": [
+              {
+                "type": "text",
+                "text": "piantasia.eu"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "author": "Annalisa",
+    "category": "Personal Stories",
+    "tags": [
+      "Julian",
+      "Blend 01",
+      "senza tabacco",
+      "senza nicotina"
     ],
     "publishedAt": "2026-11-22T11:00:00.000Z"
   }

@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import Autoplay from 'embla-carousel-autoplay';
-import { articles } from '@/data/articles';
+import { articlesInLanguage, preferredLanguage } from '@/data/articles';
 import { ArticleCard } from './ArticleCard';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 
 export function ArticlesCarousel() {
+  const articles = articlesInLanguage(preferredLanguage());
   if (!articles.length) return null;
 
   return (

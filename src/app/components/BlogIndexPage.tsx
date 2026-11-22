@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { articles } from '@/data/articles';
+import { articlesInLanguage, LANGUAGES, preferredLanguage } from '@/data/articles';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ArticleCard } from './ArticleCard';
@@ -9,6 +9,9 @@ import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 export function BlogIndexPage() {
   useDocumentTitle('Journal — Rituals, Botanicals and Harm Reduction | Piantasia');
+
+  const [language, setLanguage] = useState(preferredLanguage);
+  const articles = articlesInLanguage(language);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -34,6 +37,25 @@ export function BlogIndexPage() {
           <p className="text-base md:text-lg text-[#2B5142]/70 max-w-2xl mx-auto">
             Notes on rituals, botanicals and slow moments.
           </p>
+        </div>
+
+        <div className="flex justify-center gap-2 mb-8 md:mb-10" role="group" aria-label="Language">
+          {LANGUAGES.map(({ code, label }) => (
+            <button
+              key={code}
+              type="button"
+              lang={code}
+              onClick={() => setLanguage(code)}
+              aria-pressed={language === code}
+              className={`font-sans text-sm px-4 py-1.5 rounded-full border transition-colors ${
+                language === code
+                  ? 'bg-[#2B5142] border-[#2B5142] text-[#F5F2ED]'
+                  : 'border-[#2B5142]/25 text-[#2B5142]/75 hover:border-[#2B5142] hover:text-[#2B5142]'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
 
         {articles.length === 0 ? (
