@@ -41,7 +41,8 @@ export interface Article {
   seoTitle?: string; // <title> for search engines; defaults to "<title> | Piantasia"
   metaDescription?: string; // meta description for search engines; defaults to the site-wide one
   language: string;
-  translationKey?: string; // same value on every language version of one article
+  translationKey?: string;
+  pinned?: boolean; // shown first in the journal, before the newest articles // same value on every language version of one article
   excerpt?: string;
   cover?: string; // image URL
   content?: BlocksContent;

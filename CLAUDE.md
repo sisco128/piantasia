@@ -71,6 +71,13 @@ sito li mostra dal più recente secondo `publishedAt`.
 
 - `id` è lo slug: minuscole e trattini, unico, diventa l'indirizzo `/blog/<id>`. Una volta
   pubblicato non cambiarlo (rompe i link già condivisi e indicizzati).
+- Facoltativi: `seoTitle` e `metaDescription` (titolo e descrizione per Google; senza, il titolo
+  è "<title> | Piantasia" e la descrizione è quella generale di `index.html`), `pinned: true`
+  (l'articolo compare per primo nel Journal, prima dei più recenti: oggi lo è la guida).
+- **Lingue.** Il Journal è in inglese, tedesco e italiano (`language`: `en`, `de`, `it`). Ogni
+  versione è un articolo a sé, con `id` nella sua lingua, e tutte le versioni dello stesso
+  articolo hanno lo stesso `translationKey`. Il sito le collega da solo (link alle altre lingue,
+  hreflang, pulsanti nel Journal). Un nuovo articolo va scritto o tradotto in tutte e tre.
 - `cover` è facoltativa. Immagine in `public/blog/`, JPG o WebP, larga al massimo ~1600 px e
   sotto i 300 KB (ridimensiona/comprimi tu prima di committarla).
 - `content` usa il formato *blocks* di Strapi (rimasto da quando c'era il CMS), reso da

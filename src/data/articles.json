@@ -343,9 +343,9 @@
   },
   {
     "id": "how-to-use-herbal-blends",
-    "title": "How to Use Herbal Blends: Five Ways to Make Piantasia Part of Your Ritual",
-    "seoTitle": "How to Use Herbal Blends: 5 Ways and What's Inside | Piantasia",
-    "metaDescription": "Five ways to use a tobacco-free, nicotine-free herbal blend: on its own, with tobacco, as a base, in a vaporizer or a shisha. Plus the herbs inside each blend.",
+    "title": "How to Use Herbal Blends: Four Ways to Make Piantasia Part of Your Ritual",
+    "seoTitle": "How to Use Herbal Blends: 4 Ways and What's Inside | Piantasia",
+    "metaDescription": "Four ways to use a tobacco-free, nicotine-free herbal blend: on its own, with tobacco, as a base or in a vaporizer. Plus the herbs inside each blend.",
     "language": "en",
     "translationKey": "guide-how-to-use",
     "excerpt": "There is no single right way to use a herbal blend. Here is how our customers do it.",
@@ -364,7 +364,7 @@
         "children": [
           {
             "type": "text",
-            "text": "Here are the five ways we see most."
+            "text": "Here are the four ways we see most."
           }
         ]
       },
@@ -459,25 +459,6 @@
           {
             "type": "text",
             "text": "The herbs can also go in a dry herb vaporizer, for those who prefer not to burn them."
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "children": [
-          {
-            "type": "text",
-            "text": "5. In a shisha"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "text": "The blends can also be used in a shisha, as a tobacco-free option."
           }
         ]
       },
@@ -803,7 +784,8 @@
       "nicotine-free",
       "how to use"
     ],
-    "publishedAt": "2026-11-22T09:00:00.000Z"
+    "publishedAt": "2026-11-22T09:00:00.000Z",
+    "pinned": true
   },
   {
     "id": "ultima-sigaretta-fabienne",
@@ -2500,9 +2482,9 @@
   },
   {
     "id": "kraeutermischungen-verwenden",
-    "title": "Kräutermischungen verwenden: Fünf Wege, Piantasia zu einem Teil deines Rituals zu machen",
-    "seoTitle": "Kräutermischungen verwenden: 5 Wege und was drin ist | Piantasia",
-    "metaDescription": "Fünf Wege, eine Kräutermischung ohne Tabak und Nikotin zu nutzen: pur, mit Tabak, als Basis, im Vaporizer oder in der Shisha. Plus die Kräuter in jedem Blend.",
+    "title": "Kräutermischungen verwenden: Vier Wege, Piantasia zu einem Teil deines Rituals zu machen",
+    "seoTitle": "Kräutermischungen verwenden: 4 Wege und was drin ist | Piantasia",
+    "metaDescription": "Vier Wege, eine Kräutermischung ohne Tabak und Nikotin zu nutzen: pur, mit Tabak, als Basis oder im Vaporizer. Plus die Kräuter in jedem Blend.",
     "language": "de",
     "translationKey": "guide-how-to-use",
     "excerpt": "Es gibt nicht den einen richtigen Weg, eine Kräutermischung zu verwenden. So machen es unsere Kundinnen und Kunden.",
@@ -2521,7 +2503,7 @@
         "children": [
           {
             "type": "text",
-            "text": "Hier sind die fünf Wege, die wir am häufigsten sehen."
+            "text": "Hier sind die vier Wege, die wir am häufigsten sehen."
           }
         ]
       },
@@ -2616,25 +2598,6 @@
           {
             "type": "text",
             "text": "Die Kräuter können auch in einen Vaporizer für trockene Kräuter, für alle, die sie lieber nicht verbrennen möchten."
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "children": [
-          {
-            "type": "text",
-            "text": "5. In der Shisha"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "text": "Die Blends lassen sich auch in der Shisha verwenden, als tabakfreie Option."
           }
         ]
       },
@@ -2948,13 +2911,14 @@
       "ohne Nikotin",
       "Anwendung"
     ],
-    "publishedAt": "2026-11-22T09:00:00.000Z"
+    "publishedAt": "2026-11-22T09:00:00.000Z",
+    "pinned": true
   },
   {
     "id": "come-usare-le-miscele-di-erbe",
-    "title": "Come usare le miscele di erbe: cinque modi per fare di Piantasia parte del tuo rituale",
-    "seoTitle": "Come usare le miscele di erbe: 5 modi e cosa c'è dentro | Piantasia",
-    "metaDescription": "Cinque modi per usare una miscela di erbe senza tabacco e senza nicotina: da sola, con il tabacco, come base, nel vaporizzatore o nel narghilè. E le erbe di ogni blend.",
+    "title": "Come usare le miscele di erbe: quattro modi per fare di Piantasia parte del tuo rituale",
+    "seoTitle": "Come usare le miscele di erbe: 4 modi e cosa c'è dentro | Piantasia",
+    "metaDescription": "Quattro modi per usare una miscela di erbe senza tabacco e senza nicotina: da sola, con il tabacco, come base o nel vaporizzatore. E le erbe di ogni blend.",
     "language": "it",
     "translationKey": "guide-how-to-use",
     "excerpt": "Non esiste un unico modo giusto di usare una miscela di erbe. Ecco come la usano i nostri clienti.",
@@ -2973,7 +2937,7 @@
         "children": [
           {
             "type": "text",
-            "text": "Ecco i cinque modi che vediamo più spesso."
+            "text": "Ecco i quattro modi che vediamo più spesso."
           }
         ]
       },
@@ -3068,25 +3032,6 @@
           {
             "type": "text",
             "text": "Le erbe si possono usare anche in un vaporizzatore per erbe secche, per chi preferisce non bruciarle."
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "children": [
-          {
-            "type": "text",
-            "text": "5. Nel narghilè"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "text": "I blend si possono usare anche nel narghilè, come opzione senza tabacco."
           }
         ]
       },
@@ -3400,7 +3345,8 @@
       "senza nicotina",
       "come usarla"
     ],
-    "publishedAt": "2026-11-22T09:00:00.000Z"
+    "publishedAt": "2026-11-22T09:00:00.000Z",
+    "pinned": true
   },
   {
     "id": "julian-evening-ritual",

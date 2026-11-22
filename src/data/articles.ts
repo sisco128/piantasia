@@ -3,9 +3,11 @@ import data from './articles.json';
 
 // Blog articles are edited directly in articles.json (see CLAUDE.md). The
 // body uses the Strapi blocks format, kept from when the CMS managed them.
-// Newest first, whatever order the file is in — the CMS used to sort them.
-export const articles: Article[] = [...(data as Article[])].sort((a, b) =>
-  (b.publishedAt ?? '').localeCompare(a.publishedAt ?? '')
+// Pinned articles first, then newest first, whatever order the file is in.
+export const articles: Article[] = [...(data as Article[])].sort(
+  (a, b) =>
+    Number(!!b.pinned) - Number(!!a.pinned) ||
+    (b.publishedAt ?? '').localeCompare(a.publishedAt ?? '')
 );
 
 /** Languages the journal is written in, in the order the switcher shows them. */
