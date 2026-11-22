@@ -38,6 +38,8 @@ export interface Review {
 export interface Article {
   id: string; // slug
   title: string;
+  seoTitle?: string; // <title> for search engines; defaults to "<title> | Piantasia"
+  metaDescription?: string; // meta description for search engines; defaults to the site-wide one
   language: string;
   excerpt?: string;
   cover?: string; // image URL

@@ -57,7 +57,21 @@ export function ArticlePage() {
   const { slug } = useParams<{ slug: string }>();
   const article = articles.find((a) => a.id === slug);
 
-  useDocumentTitle(article ? `${article.title} | Piantasia` : 'Article not found | Piantasia');
+  useDocumentTitle(
+    article ? article.seoTitle ?? `${article.title} | Piantasia` : 'Article not found | Piantasia'
+  );
+
+  // Per-article meta description, restored to the site-wide one on leaving.
+  useEffect(() => {
+    const description = article?.metaDescription;
+    const meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (!description || !meta) return;
+    const previous = meta.content;
+    meta.content = description;
+    return () => {
+      meta.content = previous;
+    };
+  }, [article?.metaDescription]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
